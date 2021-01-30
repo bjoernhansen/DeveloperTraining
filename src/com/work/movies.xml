@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding = "UTF-8"?>
+<?xml-stylesheet href="movies.xsl" type="text/xsl"?>
+<movie-collection>
+    <movie>
+        <title>Avatar – Aufbruch nach Pandora</title>
+        <genre>Science-Fiction</genre>
+        <cast>
+            <actor name="Sam Worthington"/>
+            <actor name="Zoë Saldaña"/>
+            <actor name="Sigourney Weaver"/>
+        </cast>
+        <director name="James Cameron"></director>
+    </movie>
+
+    <movie>
+        <title>Titanic</title>
+        <genre>Drama</genre>
+        <cast>
+            <actor name="Leonardo DiCaprio"/>
+            <actor name="Kate Winslet"/>
+        </cast>
+        <director name="James Cameron"></director>
+    </movie>
+
+    <movie>
+        <title>Avengers: Endgame</title>
+        <genre>Science-Fiction-Action</genre>
+        <genre>Action</genre>
+        <cast>
+            <actor name="Sam Worthington"/>
+            <actor name="Zoë Saldaña"/>
+            <actor name="Sigourney Weaver"/>
+        </cast>
+        <director name="Anthony Russon"></director>
+        <director name="Joe Russo"></director>
+    </movie>
+
+</movie-collection>
