@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductComplete 
+	xmlns="http://www.evelopment.de/schema/ProductComplete" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.evelopment.de/schema/ProductComplete ProductComplete.xsd"
+	TO="360e" 
+	FROM="FrontEndArtikelstamm"
+	>
+<!-- Warenklassifikation: Hier trivial ausgepägt (1 Warenbereich, 1 Produktobergruppe, 1 Produktgruppe), kann ggf. differenziert werden -->
+<!-- Manko evtl.: Keine Bezeichnungen zu „Whg“, „Wg“, „Wug“ in Adler-Quelldaten, nur Nummern? -->
+<ProductGroups>
+    <ProductGroup externId="4">
+        <Name lang="de">Default</Name>
+    </ProductGroup>
+    <ProductSubgroup externId="9999998" subcategoryOf="4" hierarchy="1">
+        <Name lang="de">Default</Name>
+    </ProductSubgroup>    
+    <ProductSubgroup externId="9999999" subcategoryOf="9999998" hierarchy="2">
+        <Name lang="de">Default</Name>
+    </ProductSubgroup>
+</ProductGroups>
+<!-- Farb- und Größenkategorien, Farben und Größen: Aufzählung evtl. anhand Satzarten „02“ und „04“ der Adler-Artikeldaten (?), differenziert soweit nötig -->
+<!-- Manko: Keine Bezeichnungen zu Farben und Größen in den Quelldaten, nur Nummern -->
+<Producttext type="Farbkategorie" category="Variant" externId="Farbkategorie_Shopfarben">
+    <Text lang="de">Shopfarben</Text>
+</Producttext>
+<Producttext type="Gr&#xF6;&#xDF;enkategorie" category="Article" externId="Groessenkategorie_Shopgroessen">
+    <Text lang="de">Shopgrößen</Text>
+</Producttext>
+<Producttext type="Farbe" category="Variant" externId="farbe_mauve-cream">
+    <TextCategory externId="Farbkategorie_Shopfarben"/>
+    <Text lang="de">mauve-cream</Text>
+</Producttext>
+<Producttext type="Farbe" category="Variant" externId="farbe_l.grey-navy">
+    <TextCategory externId="Farbkategorie_Shopfarben"/>
+    <Text lang="de">l.grey-navy</Text>
+</Producttext>
+<Producttext type="Gr&#xF6;&#xDF;e" category="Article" externId="groesse_xs">
+    <TextCategory externId="Groessenkategorie_Shopgroessen"/>
+    <Text lang="de">xs</Text>
+</Producttext>
+<Product subcategoryOf="9999999" externId="1251024056"> 
+    <Name lang="de">Cash.Mix Sweater Two Colors, mauve-cream</Name>
+    <Name lang="en">Cash.Mix Sweater Two Colors, mauve-cream</Name>
+    <Agent code="0000"/>
+    <Variant externId="1251024056" ordernr="1251024056">
+        <TextRef externId="farbe_mauve-cream"/> <!-- Herstellung der Farbzuordnung -->
+        <Article externId="12510240560779" referenceNr="12510240560779" status="active">
+            <TextRef externId="groesse_xs"/> <!-- Herstellung der Größenzuordnung -->
+            <!--SHOP: adler_at-->
+            <Distribution distributionChannelId="3221" zeroPrice="false" cancellation="never">
+                <SalesPrice minQty="1" unitGrossPrice="0.01"/>
+                <CatalogOccurrence catalogNr="1234" planningUnit="Standard">
+                    <CatalogSalesPrice minQty="1" unitGrossPrice="0.01"/>
+                </CatalogOccurrence>
+            </Distribution>
+            <!--SHOP: adler_ch-->
+            <Distribution distributionChannelId="3223" zeroPrice="false" cancellation="never">
+                <SalesPrice minQty="1" unitGrossPrice="0.01"/>
+                <CatalogOccurrence catalogNr="1234" planningUnit="Standard">
+                    <CatalogSalesPrice minQty="1" unitGrossPrice="0.01"/>
+                </CatalogOccurrence>
+            </Distribution>
+            <!--SHOP: adler_de-->
+            <Distribution distributionChannelId="2" zeroPrice="false" cancellation="never">
+                <SalesPrice minQty="1" unitGrossPrice="0.01"/>
+                <CatalogOccurrence catalogNr="1234" planningUnit="Standard">
+                    <CatalogSalesPrice minQty="1" unitGrossPrice="0.01"/>
+                </CatalogOccurrence>
+            </Distribution>
+            <!--SHOP: adler_gb-->
+            <Distribution distributionChannelId="57825" zeroPrice="false" cancellation="never">
+                <SalesPrice minQty="1" unitGrossPrice="0.01"/>
+                <CatalogOccurrence catalogNr="1234" planningUnit="Standard">
+                    <CatalogSalesPrice minQty="1" unitGrossPrice="0.01"/>
+                </CatalogOccurrence>
+            </Distribution>
+            <!--SHOP: adler_nl-->
+            <Distribution distributionChannelId="3222" zeroPrice="false" cancellation="never">
+                <SalesPrice minQty="1" unitGrossPrice="0.01"/>
+                <CatalogOccurrence catalogNr="1234" planningUnit="Standard">
+                    <CatalogSalesPrice minQty="1" unitGrossPrice="0.01"/>
+                </CatalogOccurrence>
+            </Distribution>
+        </Article>
+<!-- Weitere SKU (Größen) zur Farbe „mauve-cream“
+        <Article ...>
+        </Article>
+-->
+    </Variant>
+</Product>
+<Product subcategoryOf="9999999" externId="1251024057"> 
+    <Name lang="de">Cash.Mix Sweater Two Colors, l.grey-navy</Name>
+    <Name lang="en">Cash.Mix Sweater Two Colors, l.grey-navy</Name>
+    <Variant externId="1251024057" ordernr="1251024057">
+        <TextRef externId="farbe_l.grey-navy"/>
+        <Article externId="12510240570779" referenceNr="12510240570779" status="active">
+            <TextRef externId="groesse_xs"/>
+            <!--SHOP: adler_at-->
+            <Distribution distributionChannelId="3221" zeroPrice="false" cancellation="discontinued">
+                <SalesPrice minQty="1" unitGrossPrice="0.01"/>
+                <CatalogOccurrence catalogNr="1234" planningUnit="Standard">
+                    <CatalogSalesPrice minQty="1" unitGrossPrice="0.01"/>
+                </CatalogOccurrence>
+            </Distribution>
+            <!--SHOP: adler_ch-->
+            <Distribution distributionChannelId="3223" zeroPrice="false" cancellation="discontinued">
+                <SalesPrice minQty="1" unitGrossPrice="0.01"/>
+                <CatalogOccurrence catalogNr="1234" planningUnit="Standard">
+                    <CatalogSalesPrice minQty="1" unitGrossPrice="0.01"/>
+                </CatalogOccurrence>
+            </Distribution>
+            <!--SHOP: adler_de-->
+            <Distribution distributionChannelId="2" zeroPrice="false" cancellation="discontinued">
+                <SalesPrice minQty="1" unitGrossPrice="0.01"/>
+                <CatalogOccurrence catalogNr="1234" planningUnit="Standard">
+                    <CatalogSalesPrice minQty="1" unitGrossPrice="0.01"/>
+                </CatalogOccurrence>
+            </Distribution>
+            <!--SHOP: adler_gb-->
+            <Distribution distributionChannelId="57825" zeroPrice="false" cancellation="discontinued">
+                <SalesPrice minQty="1" unitGrossPrice="0.01"/>
+                <CatalogOccurrence catalogNr="1234" planningUnit="Standard">
+                    <CatalogSalesPrice minQty="1" unitGrossPrice="0.01"/>
+                </CatalogOccurrence>
+            </Distribution>
+            <!--SHOP: adler_nl-->
+            <Distribution distributionChannelId="3222" zeroPrice="false" cancellation="discontinued">
+                <SalesPrice minQty="1" unitGrossPrice="0.01"/>
+                <CatalogOccurrence catalogNr="1234" planningUnit="Standard">
+                    <CatalogSalesPrice minQty="1" unitGrossPrice="0.01"/>
+                </CatalogOccurrence>
+            </Distribution>
+        </Article>
+<!-- Weitere SKU (=Größen) zu Farbe „l.grey-navy“
+        <Article ...>
+        </Article>
+-->
+    </Variant>
+</Product>
+<!-- Weitere Produkte, Farben und SKU
+<Product …>
+</Product>
+-->
+</ProductComplete>
