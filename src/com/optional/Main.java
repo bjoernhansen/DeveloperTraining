@@ -5,7 +5,6 @@ import com.optional.model.Feature;
 import com.optional.model.Subfeature;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +17,8 @@ public class Main {
     public static void main(String[] args) {
         List<Asset> assets = getAssets();
 
-        printAssetValues(assets, Main::getSubfeatureValue1, "mit flatmap wenn Optional als Rückgabe verwendet");
+        printAssetValues(assets, Main::getSubfeatureValue1a, "mit map ohne Optional als Rückgabe");
+        printAssetValues(assets, Main::getSubfeatureValue1b, "mit flatmap wenn Optional als Rückgabe verwendet");
         printAssetValues(assets, Main::getSubfeatureValue2, "mit Hilfsfunktion applyIfNotNull");
         printAssetValues(assets, Main::getSubfeatureValue3, "Alternative");
         printAssetValues(assets, Main::getSubfeatureValue4, "Alternative");
@@ -37,15 +37,22 @@ public class Main {
         return assets;
     }
 
-    private static void printAssetValues(List<Asset> assets, Function<Asset, String> function, String msg){
+    private static void printAssetValues(List<Asset> assets, Function<Asset, String> function, String msg) {
         System.out.println("\n" + msg);
         assets.stream()
               .map(function)
               .forEach(System.out::println);
     }
 
-    private static String getSubfeatureValue1(Asset asset) {
+    private static String getSubfeatureValue1a(Asset asset) {
+        return Optional.ofNullable(asset)
+                       .map(Asset::getFeature)
+                       .map(Feature::getSubfeature)
+                       .map(Subfeature::getValue)
+                       .orElse("kein Value");
+    }
 
+    private static String getSubfeatureValue1b(Asset asset) {
         return Optional.ofNullable(asset)
                        .flatMap(Asset::getOptionalFeature)
                        .flatMap(Feature::getOptionalSubfeature)
@@ -54,7 +61,6 @@ public class Main {
     }
 
     private static String getSubfeatureValue2(Asset asset) {
-
         return Optional.ofNullable(asset)
                        .map(applyIfNotNull(Asset::getFeature))
                        .map(applyIfNotNull(Feature::getSubfeature))
@@ -67,7 +73,6 @@ public class Main {
     }
 
     private static String getSubfeatureValue3(Asset asset) {
-
         return Stream.of(asset)
                      .map(Optional::ofNullable)
                      .map(a -> a.map(Asset::getFeature))
