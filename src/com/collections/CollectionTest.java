@@ -5,8 +5,7 @@ import java.util.stream.IntStream;
 
 class CollectionTest
 {
-    static final int NUMBER_OF_ELEMENTS = 100;
-    private static Random random = new Random();
+    private static final int NUMBER_OF_ELEMENTS = 25;
 
     public static LinkedList <String> nameList = new LinkedList<>();
 
@@ -17,8 +16,6 @@ class CollectionTest
         {
             nameList.add(RandomNameCreator.getName());
         }
-
-        String[] nameArray = nameList.toArray(new String[0]);
 
         System.out.println(nameList);
         nameList.forEach(System.out::println);
