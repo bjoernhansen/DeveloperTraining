@@ -17,36 +17,21 @@ public class Example extends Application
     @Override
     public void start(final Stage primaryStage)
     {
-    
         Canvas canvas = new Canvas( 1024, 768);
-    
-       
-        
-        
         gc = canvas.getGraphicsContext2D();
-        
-        
-        
-        
-        
+
         final Scene scene = new Scene(new Group(canvas), canvas.getWidth(), canvas.getHeight(), Color.BLACK);
         primaryStage.setScene(scene);
         primaryStage.setFullScreen(false);
         primaryStage.setResizable(false);
-        
-        
+
         primaryStage.show();
-    
-    
-        
-        
+
         new AnimationTimer()
         {
             @Override
             public void handle(long now)
             {
-              
-                
                 gc.setFill(Color.GOLD);
                 gc.fillRect(0,0, canvas.getWidth(), canvas.getHeight());
                 
@@ -56,30 +41,13 @@ public class Example extends Application
                 gc.setFill(Color.INDIANRED);
                 gc.fillOval(170+100*Math.sin(rotator/10), 170+100*Math.cos(rotator/10), 20, 20);
                 
-               
-                
                 rotator += 0.25;
-    
-                
-                
-    
-                
-               
-                
-                
-                
-          
             }
-            
-            
-            
         }.start();
     }
     
     public static void main(String[] args)
     {
-        
-        
         launch(args);
     }
     

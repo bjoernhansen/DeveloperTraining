@@ -38,7 +38,7 @@ public class Example3AI extends Application
         AnimatedImage ufo = new AnimatedImage();
         Image[] imageArray = new Image[6];
         for (int i = 0; i < 6; i++)
-            imageArray[i] = new Image( "com/javafx/animation/gameExamples/ufo_" + i + ".png" );
+            imageArray[i] = new Image( "com/javafx/animation/gameExamples/pictures/ufo_" + i + ".png" );
         ufo.frames = imageArray;
         ufo.duration = 0.100;
 

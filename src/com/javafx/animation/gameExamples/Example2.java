@@ -11,43 +11,40 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
-public class Example2 extends Application 
-{
-    public static void main(String[] args) 
-    {
+
+public class Example2
+        extends Application {
+
+    public static void main(String[] args) {
         launch(args);
     }
 
     @Override
-    public void start(Stage theStage) 
-    {
-        theStage.setTitle( "Canvas Example" );
-        
+    public void start(Stage stage) {
+        stage.setTitle("Canvas Example");
+
         Group root = new Group();
-        Scene theScene = new Scene( root );
-        theStage.setScene( theScene );
-        
-        Canvas canvas = new Canvas( 400, 200 );
-        root.getChildren().add( canvas );
-        
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+
+        Canvas canvas = new Canvas(400, 200);
+        root.getChildren()
+            .add(canvas);
+
         GraphicsContext gc = canvas.getGraphicsContext2D();
-        
-        gc.setFill( Color.RED );
-        gc.setStroke( Color.BLACK );
+
+        gc.setFill(Color.RED);
+        gc.setStroke(Color.BLACK);
         gc.setLineWidth(2);
-        Font theFont = Font.font( "Times New Roman", FontWeight.BOLD, 48 );
-        gc.setFont( theFont );
-        gc.fillText( "Hello, World!", 60, 50 );
-        gc.strokeText( "Hello, World!", 60, 50 );
-    
-        
-        
+        Font font = Font.font("Times New Roman", FontWeight.BOLD, 48);
+        gc.setFont(font);
+        gc.fillText("Hello, World!", 60, 50);
+        gc.strokeText("Hello, World!", 60, 50);
+
         Image earth = new Image("com/javafx/animation/gameExamples/pictures/earth.png");
-        
-        
-        
-        gc.drawImage( earth, 180, 100 );
-        
-        theStage.show();
+
+        gc.drawImage(earth, 180, 100);
+
+        stage.show();
     }
 }

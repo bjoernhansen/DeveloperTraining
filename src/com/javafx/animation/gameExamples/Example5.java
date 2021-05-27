@@ -36,28 +36,18 @@ public class Example5 extends Application
         Canvas canvas = new Canvas( 512, 512 );
         root.getChildren().add( canvas );
 
-        ArrayList<String> input = new ArrayList<String>();
+        ArrayList<String> input = new ArrayList<>();
 
-        theScene.setOnKeyPressed(
-            new EventHandler<KeyEvent>()
-            {
-                public void handle(KeyEvent e)
-                {
-                    String code = e.getCode().toString();
-                    if ( !input.contains(code) )
-                        input.add( code );
-                }
-            });
+        theScene.setOnKeyPressed(e -> {
+            String code = e.getCode().toString();
+            if ( !input.contains(code) )
+                input.add( code );
+        });
 
-        theScene.setOnKeyReleased(
-            new EventHandler<KeyEvent>()
-            {
-                public void handle(KeyEvent e)
-                {
-                    String code = e.getCode().toString();
-                    input.remove( code );
-                }
-            });
+        theScene.setOnKeyReleased(e -> {
+            String code = e.getCode().toString();
+            input.remove( code );
+        });
 
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
@@ -71,7 +61,7 @@ public class Example5 extends Application
         briefcase.setImage("com/javafx/animation/gameExamples/pictures/briefcase.png");
         briefcase.setPosition(200, 0);
         
-        ArrayList<Sprite> moneybagList = new ArrayList<Sprite>();
+        ArrayList<Sprite> moneybagList = new ArrayList<>();
         
         for (int i = 0; i < 15; i++)
         {

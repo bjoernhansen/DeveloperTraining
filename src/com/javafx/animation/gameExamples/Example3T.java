@@ -17,60 +17,56 @@ import javafx.util.Duration;
 //    using the Timeline, KeyFrame, and Duration classes.
 
 // Animation of Earth rotating around the sun. (Hello, world!)
-public class Example3T extends Application 
-{
-    public static void main(String[] args) 
-    {
+public class Example3T
+        extends Application {
+
+    public static void main(String[] args) {
         launch(args);
     }
 
     @Override
-    public void start(Stage theStage) 
-    {
-        theStage.setTitle( "Timeline Example" );
-        
+    public void start(Stage theStage) {
+        theStage.setTitle("Timeline Example");
+
         Group root = new Group();
-        Scene theScene = new Scene( root );
-        theStage.setScene( theScene );
-        
-        Canvas canvas = new Canvas( 512, 512 );
-        root.getChildren().add( canvas );
-        
+        Scene theScene = new Scene(root);
+        theStage.setScene(theScene);
+
+        Canvas canvas = new Canvas(512, 512);
+        root.getChildren()
+            .add(canvas);
+
         GraphicsContext gc = canvas.getGraphicsContext2D();
-        
+
         Image earth = new Image("com/javafx/animation/gameExamples/pictures/earth.png");
-        Image sun   = new Image("com/javafx/animation/gameExamples/pictures/sun.png");
+        Image sun = new Image("com/javafx/animation/gameExamples/pictures/sun.png");
         Image space = new Image("com/javafx/animation/gameExamples/pictures/space.png");
-        
+
         Timeline gameLoop = new Timeline();
-        gameLoop.setCycleCount( Timeline.INDEFINITE );
-        
+        gameLoop.setCycleCount(Timeline.INDEFINITE);
+
         final long timeStart = System.currentTimeMillis();
-        
-        KeyFrame kf = new KeyFrame(
-            Duration.seconds(0.017),                // 60 FPS
-            new EventHandler<ActionEvent>()
-            {
-                public void handle(ActionEvent ae)
-                {
-                    double t = (System.currentTimeMillis() - timeStart) / 1000.0; 
-                                
-                    double x = 232 + 128 * Math.cos(t);
-                    double y = 232 + 128 * Math.sin(t);
-                    
-                    // Clear the canvas
-                    gc.clearRect(0, 0, 512,512);
-                    
-                    // background image clears canvas
-                    gc.drawImage( space, 0, 0 );
-                    gc.drawImage( earth, x, y );
-                    gc.drawImage( sun, 196, 196 );
-                }
-            });
-        
-        gameLoop.getKeyFrames().add( kf );
+
+        KeyFrame keyFrame = new KeyFrame(Duration.seconds(0.017),                // 60 FPS
+                                         actionEvent -> {
+                                             double t = (System.currentTimeMillis() - timeStart) / 1000.0;
+
+                                             double x = 232 + 128 * Math.cos(t);
+                                             double y = 232 + 128 * Math.sin(t);
+
+                                             // Clear the canvas
+                                             gc.clearRect(0, 0, 512, 512);
+
+                                             // background image clears canvas
+                                             gc.drawImage(space, 0, 0);
+                                             gc.drawImage(earth, x, y);
+                                             gc.drawImage(sun, 196, 196);
+                                         });
+
+        gameLoop.getKeyFrames()
+                .add(keyFrame);
         gameLoop.play();
-        
+
         theStage.show();
     }
 }

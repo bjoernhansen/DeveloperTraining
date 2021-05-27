@@ -39,22 +39,17 @@ public class Example4M extends Application
         Circle targetData = new Circle(100,100,32);
         IntValue points = new IntValue(0);
 
-        theScene.setOnMouseClicked(
-            new EventHandler<MouseEvent>()
+        theScene.setOnMouseClicked(e -> {
+            if ( targetData.containsPoint( e.getX(), e.getY() ) )
             {
-                public void handle(MouseEvent e)
-                {
-                    if ( targetData.containsPoint( e.getX(), e.getY() ) )
-                    {
-                        double x = 50 + 400 * Math.random(); 
-                        double y = 50 + 400 * Math.random();
-                        targetData.setCenter(x,y);
-                        points.value++;
-                    }
-                    else
-                        points.value = 0;
-                }
-            });
+                double x = 50 + 400 * Math.random();
+                double y = 50 + 400 * Math.random();
+                targetData.setCenter(x,y);
+                points.value++;
+            }
+            else
+                points.value = 0;
+        });
 
         GraphicsContext gc = canvas.getGraphicsContext2D();
 

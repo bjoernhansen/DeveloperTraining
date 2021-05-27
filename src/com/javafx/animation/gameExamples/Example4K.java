@@ -51,9 +51,7 @@ public class Example4K extends Application
 
         loadGraphics();
 
-        /**
-         * Main "game" loop
-         */
+        /* Main "game" loop */
         new AnimationTimer()
         {
             public void handle(long currentNanoTime)
@@ -68,32 +66,18 @@ public class Example4K extends Application
     private static void prepareActionHandlers()
     {
         // use a set so duplicates are not possible
-        currentlyActiveKeys = new HashSet<String>();
-        mainScene.setOnKeyPressed(new EventHandler<KeyEvent>()
-        {
-            @Override
-            public void handle(KeyEvent event)
-            {
-                currentlyActiveKeys.add(event.getCode().toString());
-            }
-        });
-        mainScene.setOnKeyReleased(new EventHandler<KeyEvent>()
-        {
-            @Override
-            public void handle(KeyEvent event)
-            {
-                currentlyActiveKeys.remove(event.getCode().toString());
-            }
-        });
+        currentlyActiveKeys = new HashSet<>();
+        mainScene.setOnKeyPressed(event -> currentlyActiveKeys.add(event.getCode().toString()));
+        mainScene.setOnKeyReleased(event -> currentlyActiveKeys.remove(event.getCode().toString()));
     }
 
     private static void loadGraphics()
     {
-        left = new Image(getResource("left.png"));
-        leftGreen = new Image(getResource("leftG.png"));
+        left = new Image(getResource("pictures/left.png"));
+        leftGreen = new Image(getResource("pictures/leftG.png"));
 
-        right = new Image(getResource("right.png"));
-        rightGreen = new Image(getResource("rightG.png"));
+        right = new Image(getResource("pictures/right.png"));
+        rightGreen = new Image(getResource("pictures/rightG.png"));
     }
 
     private static String getResource(String filename)
