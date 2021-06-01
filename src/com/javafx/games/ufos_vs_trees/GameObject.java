@@ -1,17 +1,16 @@
 package com.javafx.games.ufos_vs_trees;
 
-import com.javafx.games.algebra.MyPoint;
+import com.javafx.games.algebra.Point;
 import javafx.geometry.Bounds;
 import javafx.scene.Node;
 import javafx.scene.shape.Circle;
 
 abstract class GameObject
 {
-    protected 
-        Node shape;
+    Node shape;
     
-    private MyPoint
-        direction = new MyPoint(0, 0);   
+    private Point
+        direction = new Point(0, 0);
         
     private double 
         velocity = 0,
@@ -45,7 +44,7 @@ abstract class GameObject
         return this.velocity;
     }
     
-    protected void setFriction(double friction)
+    void setFriction(double friction)
     {
         this.friction = friction;
     }
@@ -55,12 +54,12 @@ abstract class GameObject
         return this.shape;
     }
 
-    MyPoint getDirection()
+    Point getDirection()
     {
         return this.direction;
     }
 
-    protected void setDirection(double x, double y)
+    void setDirection(double x, double y)
     {
         this.direction.setLocation(x, y);
     }
@@ -96,12 +95,12 @@ abstract class GameObject
         double r1 = c1.getRadius();
         double r2 = c2.getRadius();
                    
-        double distance = MyPoint.distance(x1, y1, x2, y2);                  
+        double distance = Point.distance(x1, y1, x2, y2);
         
         return r1 + r2 > distance;
     }
     
-    protected String fromUrlOf(String path)
+    String fromUrlOf(String path)
     {
         return getClass().getResource(path).toString();
     }
