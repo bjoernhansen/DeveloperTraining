@@ -27,9 +27,9 @@ public class Glump extends Observable
     {
         this.age++;
         Collections.shuffle(presents);
-        String birtdayPresent = presents.peek();
+        String birthdayPresent = presents.peek();
         this.setChanged();
-        this.notifyObservers(birtdayPresent);
+        this.notifyObservers(birthdayPresent);
     }
 
 

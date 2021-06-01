@@ -9,7 +9,7 @@
             <actor name="Zoë Saldaña"/>
             <actor name="Sigourney Weaver"/>
         </cast>
-        <director name="James Cameron"></director>
+        <director name="James Cameron"/>
     </movie>
 
     <movie>
@@ -19,7 +19,7 @@
             <actor name="Leonardo DiCaprio"/>
             <actor name="Kate Winslet"/>
         </cast>
-        <director name="James Cameron"></director>
+        <director name="James Cameron"/>
     </movie>
 
     <movie>
@@ -31,8 +31,8 @@
             <actor name="Zoë Saldaña"/>
             <actor name="Sigourney Weaver"/>
         </cast>
-        <director name="Anthony Russon"></director>
-        <director name="Joe Russo"></director>
+        <director name="Anthony Russon"/>
+        <director name="Joe Russo"/>
     </movie>
 
 </movie-collection>

@@ -16,10 +16,10 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class AnimatedCircleOnCanvas extends Application {
-    public static final double W = 200; // canvas dimensions.
-    public static final double H = 200;
+    private static final double W = 200; // canvas dimensions.
+    private static final double H = 200;
 
-    public static final double D = 20;  // diameter.
+    private static final double D = 20;  // diameter.
 
     @Override public void start(Stage stage) {
         DoubleProperty x  = new SimpleDoubleProperty();

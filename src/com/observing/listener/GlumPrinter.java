@@ -1,9 +1,6 @@
 package com.observing.listener;
 
-import java.util.Observable;
-import java.util.Observer;
-
-public class GlumPrinter implements BirtdayListener
+public class GlumPrinter implements BirthdayListener
 {
     private String name;
     private int age;
@@ -14,13 +11,13 @@ public class GlumPrinter implements BirtdayListener
     {
         this.name = glump.getName();
         this.age = glump.getAge();
-        glump.addBirtdayListener(this);
+        glump.addBirthdayListener(this);
     }
 
     @Override
     public String toString()
     {
-        return String.format("My %d year old glump's name is %s and my last birtday present was %s.", this.age, this.name, this.lastBirthdayPresent);
+        return String.format("My %d year old glump's name is %s and my last birthday present was %s.", this.age, this.name, this.lastBirthdayPresent);
     }
 
 

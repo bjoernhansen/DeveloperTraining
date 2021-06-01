@@ -19,7 +19,7 @@ public class GlumPrinter implements Observer
     @Override
     public String toString()
     {
-        return String.format("My %d year old glump's name is %s and my last birtday present was %s.", this.age, this.name, this.lastBirthdayPresent);
+        return String.format("My %d year old glump's name is %s and my last birthday present was %s.", this.age, this.name, this.lastBirthdayPresent);
     }
 
     @Override

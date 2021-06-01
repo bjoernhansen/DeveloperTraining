@@ -2,7 +2,7 @@ package com.observing.listener;
 
 import java.util.EventListener;
 
-public interface BirtdayListener extends EventListener
+public interface BirthdayListener extends EventListener
 {
     void gifting(BirthdayEvent e);
 }

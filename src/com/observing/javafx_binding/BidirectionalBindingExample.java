@@ -21,7 +21,7 @@ public class BidirectionalBindingExample extends Application {
         Slider slider = new Slider();
         slider.setValue(INITIAL_STAND);
         TextField field = new TextField();
-        field.setText(new Double(INITIAL_STAND).toString());
+        field.setText(Double.toString(INITIAL_STAND));
 
         field.textProperty().bindBidirectional(slider.valueProperty(), NumberFormat.getNumberInstance());
 
@@ -33,7 +33,7 @@ public class BidirectionalBindingExample extends Application {
         grid.setPadding(new Insets(10));
         Scene scene = new Scene(grid);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Binding-Beispiel");
+        primaryStage.setTitle("Binding-Example");
         primaryStage.show();
     }
 

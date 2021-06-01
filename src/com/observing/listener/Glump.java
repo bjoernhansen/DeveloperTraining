@@ -5,7 +5,6 @@ import javax.swing.event.EventListenerList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
-import java.util.Observable;
 
 
 public class Glump
@@ -29,18 +28,18 @@ public class Glump
     {
         this.age++;
         Collections.shuffle(presents);
-        String birtdayPresent = presents.peek();
-        this.notifyAdvertisement(new BirthdayEvent(this, birtdayPresent));
+        String birthdayPresent = presents.peek();
+        this.notifyAdvertisement(new BirthdayEvent(this, birthdayPresent));
     }
 
-    public void addBirtdayListener(BirtdayListener listener)
+    void addBirthdayListener(BirthdayListener listener)
     {
-        this.listeners.add(BirtdayListener.class, listener);
+        this.listeners.add(BirthdayListener.class, listener);
     }
 
-    protected synchronized void notifyAdvertisement(BirthdayEvent event)
+    private synchronized void notifyAdvertisement(BirthdayEvent event)
     {
-        for(BirtdayListener listener : listeners.getListeners(BirtdayListener.class))
+        for(BirthdayListener listener : listeners.getListeners(BirthdayListener.class))
         {
             listener.gifting(event);
         }

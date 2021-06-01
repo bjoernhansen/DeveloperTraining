@@ -21,12 +21,9 @@ public class GlumPrinter
         });
 
         // hier die Variante mit annonymer Klasse anstelle eines Lambdas
-        glump.addPropertyChangeListener("name", new PropertyChangeListener() {
-            @Override
-            public void propertyChange(PropertyChangeEvent event) {
-                name = (String)event.getNewValue();
-                System.out.println("There was change! Name: " + name);
-            }
+        glump.addPropertyChangeListener("name", event -> {
+            name = (String)event.getNewValue();
+            System.out.println("There was change! Name: " + name);
         });
 
         glump.addVetoableChangeListener(e -> {
@@ -43,6 +40,6 @@ public class GlumPrinter
     @Override
     public String toString()
     {
-        return String.format("My %d year old glump's name is %s and my last birtday present was %s.", this.age, this.name, this.lastBirthdayPresent);
+        return String.format("My %d year old glump's name is %s and my last birthday present was %s.", this.age, this.name, this.lastBirthdayPresent);
     }
 }

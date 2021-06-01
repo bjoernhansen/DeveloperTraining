@@ -6,11 +6,11 @@ import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
 
-public class NumberFromStringExtractor {
+class NumberFromStringExtractor {
 
     private static final Pattern PATTERN = Pattern.compile(".+_([0-9]+)\\..+");
 
-    public static String getSapidFromFilenameBjoern(String val) {
+    static String getSapidFromFilenameBjoern(String val) {
         return Stream.of(val.split("\\."))
                      .findFirst()
                      .map(s -> s.split("_"))
@@ -19,7 +19,7 @@ public class NumberFromStringExtractor {
                      .orElse("0");
     }
 
-    public static String getSapidFromFilenameJannes(String val) {
+    static String getSapidFromFilenameJannes(String val) {
         if (val == null) {
             // maybe log warning/error?
             return "0";
@@ -40,7 +40,7 @@ public class NumberFromStringExtractor {
         }
     }
 
-    public static String getSapidFromFilenameSven(String val) {
+    static String getSapidFromFilenameSven(String val) {
         String ret = "0";
         if (hasNoValue(val)) {
             return ret;
@@ -57,7 +57,7 @@ public class NumberFromStringExtractor {
         return ret;
     }
 
-    public static String getSapidFromFilenameUwe(String val) {
+    static String getSapidFromFilenameUwe(String val) {
         String ret = "-1";
         if (val == null) {
             ret = "0";
@@ -77,12 +77,7 @@ public class NumberFromStringExtractor {
     }
 
     private static boolean hasValue(final String val) {
-        boolean ret = false;
-
-        if (val != null && !val.isEmpty()) {
-            return true;
-        }
-        return ret;
+        return val != null && !val.isEmpty();
     }
 
     private static boolean isNumeric(final String str) {

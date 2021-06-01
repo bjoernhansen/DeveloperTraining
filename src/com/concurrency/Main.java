@@ -5,7 +5,7 @@ import java.util.*;
 public class Main {
 
     private static final int MAX_NUMBER_OF_THREADS = 5;
-    public static final int DISTANCE = 3;
+    static final int DISTANCE = 3;
 
     public static void main(String[] args) {
 
@@ -24,10 +24,7 @@ public class Main {
         threads.getLast().setUnpausable();
         System.out.println("Highes Value:" +  (threads.getLast().getRangeOfResponsibility().getLowerBound()+1) + "\n");
 
-        threads.forEach(thread ->
-        {
-            thread.start();
-        });
+        threads.forEach(Thread::start);
 
         threads.forEach(thread ->
         {

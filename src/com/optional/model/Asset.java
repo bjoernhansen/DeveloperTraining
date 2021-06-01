@@ -4,8 +4,8 @@ import java.util.Optional;
 
 
 public class Asset {
-
-    Feature feature;
+    
+    private Feature feature;
 
     public Asset(Feature feature) {
         this.feature = feature;

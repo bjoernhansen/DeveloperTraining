@@ -4,8 +4,7 @@ import javafx.beans.binding.DoubleBinding;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 
-public class BindingWithOwnLogic {
-
+class BindingWithOwnLogic {
 
     public static void main(String[] args) {
         DoubleProperty a = new SimpleDoubleProperty( 6 );

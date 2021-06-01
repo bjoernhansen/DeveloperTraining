@@ -4,9 +4,10 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.sql.SQLOutput;
 
-public class BjoernsRunTests
+class BjoernsRunTests
 {
-    public static void main(String[] args) throws ClassNotFoundException {
+    public static void main(String[] args)
+    {
         int annotatedMethods = 0;
         int passedMethods = 0;
         int allMethods = 0;

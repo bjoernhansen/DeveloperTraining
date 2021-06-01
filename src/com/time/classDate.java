@@ -47,6 +47,6 @@ public class classDate {
         System.out.println("Tag: " + date.getDate());
         System.out.println("Wochentag: " + DayOfWeek.of(date.getDay()).toString());
         System.out.println("GMT String: " + date.toGMTString());
-        System.out.println("");
+        System.out.println();
     }
 }

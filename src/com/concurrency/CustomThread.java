@@ -4,7 +4,7 @@ import static com.concurrency.Main.DISTANCE;
 
 public class CustomThread extends Thread {
     private int threadNumber;
-    private VariableNumber counter;
+    private final VariableNumber counter;
 
 
     private boolean isPausable = true;
@@ -47,11 +47,11 @@ public class CustomThread extends Thread {
         System.out.println("Beende Thread Nr. " + threadNumber);
     }
 
-    public Range getRangeOfResponsibility() {
+    Range getRangeOfResponsibility() {
         return rangeOfResponsibility;
     }
 
-    public void setUnpausable() {
+    void setUnpausable() {
         isPausable = false;
     }
 }

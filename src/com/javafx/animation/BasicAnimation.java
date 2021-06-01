@@ -16,7 +16,7 @@ public class BasicAnimation extends Application
     private static final int WIDTH = 800;
     private static final int HEIGHT = 600;
     
-    int timer = 0;
+    private int timer = 0;
     
     
     private double x = 300;
@@ -26,7 +26,7 @@ public class BasicAnimation extends Application
     @Override
     public void start(final Stage primaryStage)
     {
-        primaryStage.setTitle("My JavaFX Test Enviroment");
+        primaryStage.setTitle("My JavaFX Test Environment");
         
         Group root = new Group();
         Scene scene = new Scene(root, WIDTH, HEIGHT, Color.RED);

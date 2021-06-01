@@ -2,7 +2,7 @@ package com.design_pattern.state;
 
 public interface Tool {
 
-    public void mouseUpAction();
+    void mouseUpAction();
 
-    public void mouseDownAction();
+    void mouseDownAction();
 }

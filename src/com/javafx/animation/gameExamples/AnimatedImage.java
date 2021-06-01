@@ -2,14 +2,14 @@ package com.javafx.animation.gameExamples;
 
 import javafx.scene.image.Image;
 
-public class AnimatedImage
+class AnimatedImage
 {
     // assumes animation loops,
     //  each image displays for equal time
-    public Image[] frames;
-    public double duration;
+    Image[] frames;
+    double duration;
     
-    public Image getFrame(double time)
+    Image getFrame(double time)
     {
         int index = (int)((time % (frames.length * duration)) / duration);
         return frames[index];

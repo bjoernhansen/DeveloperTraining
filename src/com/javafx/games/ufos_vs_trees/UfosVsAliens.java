@@ -23,7 +23,7 @@ import static com.javafx.games.ufos_vs_trees.Ufo.UFO_RADIUS;
 
 public class UfosVsAliens extends Application
 {
-    static final String
+    private static final String
         BACKGROUND_IMAGE_PATH = "images/pavement.jpg",
         CRASH_SOUND_PATH =      "sounds/crash.m4a",
         UFO_SOUND_PATH =        "sounds/ufo.wav";
@@ -53,8 +53,8 @@ public class UfosVsAliens extends Application
         this.root.setPrefSize(SCREEN_SIZE.width, SCREEN_SIZE.height);        
         this.createTrees();
         this.ufo = new Ufo();
-        this.addGameObject(this.ufo, SCREEN_SIZE.width /2 - UFO_RADIUS,
-                                     SCREEN_SIZE.height/2 - UFO_RADIUS);
+        this.addGameObject(this.ufo, SCREEN_SIZE.width/2.0  - UFO_RADIUS,
+                                     SCREEN_SIZE.height/2.0 - UFO_RADIUS);
         return this.root;
     }
 
@@ -78,7 +78,7 @@ public class UfosVsAliens extends Application
         this.root.getChildren().add(object.getShape());
     }
 
-    void onUpdate()
+    private void onUpdate()
     {
         this.ufo.update();
         checkForAndHandleCollsions();        
@@ -117,7 +117,7 @@ public class UfosVsAliens extends Application
 
     
     @Override
-    public void start(Stage primaryStage) throws Exception
+    public void start(Stage primaryStage)
     {        
         primaryStage.setTitle("Ufos vs. Trees");
         
@@ -129,7 +129,7 @@ public class UfosVsAliens extends Application
         primaryStage.show();
     }
     
-    AnimationTimer createAnimationTimer()
+    private AnimationTimer createAnimationTimer()
     {
         return new AnimationTimer()
         {
