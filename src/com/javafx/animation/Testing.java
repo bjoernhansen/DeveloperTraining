@@ -10,7 +10,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
-public class RectangleVolcano2 extends Application
+public class Testing extends Application
 {
     double x = 0;
    
@@ -21,7 +21,7 @@ public class RectangleVolcano2 extends Application
     @Override
     public void start(final Stage primaryStage)
     {
-        Canvas canvas = new Canvas (2024, 768);
+        Canvas canvas = new Canvas (1024, 768);
         scene = new Scene(new Pane(canvas));
         primaryStage.setScene(scene);
         primaryStage.show();

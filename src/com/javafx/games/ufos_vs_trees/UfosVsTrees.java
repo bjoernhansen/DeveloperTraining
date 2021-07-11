@@ -21,7 +21,7 @@ import java.util.Random;
 import static com.javafx.games.ufos_vs_trees.Ufo.UFO_RADIUS;
 
 
-public class UfosVsAliens extends Application
+public class UfosVsTrees extends Application
 {
     private static final String
         BACKGROUND_IMAGE_PATH = "images/pavement.jpg",
