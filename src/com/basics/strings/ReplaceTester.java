@@ -1,4 +1,4 @@
-package com.basics.Strings;
+package com.basics.strings;
 
 public class ReplaceTester {
 
