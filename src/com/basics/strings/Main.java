@@ -1,4 +1,4 @@
-package com.basics.Strings;
+package com.basics.strings;
 
 import com.utilities.Stopwatch;
 

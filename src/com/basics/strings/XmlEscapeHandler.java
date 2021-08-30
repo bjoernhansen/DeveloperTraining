@@ -1,7 +1,5 @@
-package com.basics.Strings;
+package com.basics.strings;
 
-
-import com.utilities.Stopwatch;
 
 import java.io.StringWriter;
 import java.util.Arrays;

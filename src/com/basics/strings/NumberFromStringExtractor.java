@@ -1,4 +1,4 @@
-package com.basics.Strings;
+package com.basics.strings;
 
 import java.util.Objects;
 import java.util.regex.Matcher;
