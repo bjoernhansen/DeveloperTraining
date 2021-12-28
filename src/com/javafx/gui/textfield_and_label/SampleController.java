@@ -1,7 +1,5 @@
-package com.javafx.gui.hello2;
+package com.javafx.gui.textfield_and_label;
 
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
