@@ -1,4 +1,4 @@
-package com.javafx.gui.hello2;
+package com.javafx.gui.textfield_and_label;
 	
 import javafx.application.Application;
 import javafx.stage.Stage;
