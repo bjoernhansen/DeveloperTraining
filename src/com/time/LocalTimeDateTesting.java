@@ -1,8 +1,18 @@
 package com.time;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 
 public class LocalTimeDateTesting {
-    LocalDate tomorrow = LocalDate.now().plusDays(1);
+
+    static LocalDateTime tomorrow = LocalDateTime.now()
+                                                 .plusDays(1);
+
+    public static void main(String[] args) {
+        final DateTimeFormatter isoInstantDateTimeFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'");
+        LocalDateTime dateThreeMonthAgo = LocalDateTime.now()
+                                                       .minusMonths(3);
+        System.out.println(dateThreeMonthAgo.format(isoInstantDateTimeFormat));
+    }
 }
