@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Polygon?>
+<?import java.lang.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <Group layoutX="180.0" layoutY="200.0">
+        <Arc fill="#ff4a1f" length="270.0" radiusX="100.0" radiusY="100.0" startAngle="45.0" stroke="BLACK"
+             strokeType="INSIDE" type="ROUND"/>
+
+        <Circle radius="73.0" stroke="BLACK" strokeType="INSIDE">
+            <fill>
+                <RadialGradient centerX="0.5166666666666667" centerY="0.5" radius="0.5">
+                    <stops>
+                        <Stop color="#1e0ccf"/>
+                        <Stop color="#1d0ccf" offset="0.9109689141683454"/>
+                        <Stop color="WHITE" offset="1.0"/>
+                    </stops>
+                </RadialGradient>
+            </fill>
+            <cursor>
+                <Cursor fx:constant="H_RESIZE"/>
+            </cursor>
+        </Circle>
+    </Group>
+    <Group layoutX="404.0" layoutY="243.0">
+        <Polygon fill="DODGERBLUE" stroke="BLACK" strokeType="INSIDE">
+            <points>
+                <Double fx:value="-50.0"/>
+                <Double fx:value="40.0"/>
+                <Double fx:value="50.0"/>
+                <Double fx:value="40.0"/>
+                <Double fx:value="0.0"/>
+                <Double fx:value="-60.0"/>
+            </points>
+        </Polygon>
+        <Ellipse fill="#1fccff6e" layoutX="9.0" layoutY="-24.0" radiusX="39.0" radiusY="98.0" stroke="BLACK"
+                 strokeType="INSIDE"/>
+    </Group>
+</AnchorPane>

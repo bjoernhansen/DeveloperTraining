@@ -1,0 +1,35 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+#test{ /* id */
+	
+}
+.root{ /* Root-Pane / Root-Container */
+	-fx-background-color: red;
+}
+
+.button{ /* alle FX-Buttons */
+	-fx-background-color: blue;
+	
+	
+}
+
+.text-field{ /* alle FX-Text-Felder */
+	
+}
+
+.myButton{
+	-fx-background-color: yellow;
+}
+
+#b3{
+	-fx-background-color: green;
+}
+
+.extraView{
+	-fx-background-color: #666;
+}
+
+.extraView #bb4{
+	-fx-background-color: #cc88ee;
+}
+
