@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <child1 id="1234">Max</child1>
+  <child3>
+    <child2a />
+  </child3>
+</root>
