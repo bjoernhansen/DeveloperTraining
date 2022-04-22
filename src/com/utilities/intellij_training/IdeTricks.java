@@ -1,18 +1,9 @@
 package com.utilities.intellij_training;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Logger;
-
-import static java.lang.System.currentTimeMillis;
-
-
-
-
-
 
 
 public class IdeTricks {
@@ -61,53 +52,77 @@ public class IdeTricks {
     }
 
 
-    private void someMethod() {
-
-        if (value == null) {
-
+    private static class MyStringSum
+    {
+        int a, b;
+        
+        MyStringSum(int a, int b){
+            this.a = a;
+            this.b = b;
         }
+        
+        @Override
+        public String toString(){
+            return a + " " + b;
+        }
+        
     }
-
-
-
-
-    public static void main(String[] args) {
-
-
-
-
-
-
-
-        currentTimeMillis();
-
-
+    
+    private static String someMethod(int a, int b) {
+        return new MyStringSum(a,b).toString();
+    }
+    
+    public static void main(String[] args)
+    {
+    
         Company company = new Company(null);
-
-        for (Person person : company.getEmployee()) {
-            String fullName = person.firstName + " " + person.firstName;
-        }
-
-
-        for (Person person : company.getEmployee()) {
+    
+        for (Person person : company.getEmployee())
+        {
             System.out.println(person.firstName);
+    
+            if (person.firstName == "John Doe")
+            {
+            
+            }
+    
         }
+        
+        
+    
+    
+        System.out.println(someMethod(1, 2));
+        System.out.println(someMethod(3, 4));
+        
+        
+        
+        
+    }
+    
 
-
-
-
-
-
-
+    
+    
+        /*
+        Company company = new Company(null);
+    
+        for (Person person : company.getEmployee())
+        {
+            String fullName = person.lastName + person.getLastName();
+        }
+    
+    
+        for (Person myPerson : company.getEmployee())
+        {
+            System.out.println(myPerson);
+        }
+    
+    
+    
+    
+    
         final Pet pet = new Pet();
 
-
-
-
-    }
-
-
-
+        */
 
 
 }
