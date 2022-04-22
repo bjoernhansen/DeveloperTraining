@@ -1,5 +1,7 @@
 package com.basics.collections;
 
+import com.basics.hero.RandomNameCreator;
+
 import java.util.*;
 
 class CollectionTest
@@ -13,7 +15,7 @@ class CollectionTest
     {
         for(int i = 0; i < NUMBER_OF_ELEMENTS; i++)
         {
-            nameList.add(RandomNameCreator.getName());
+            nameList.add(RandomNameCreator.createName());
         }
 
         System.out.println(nameList);

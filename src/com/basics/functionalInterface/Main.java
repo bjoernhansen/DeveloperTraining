@@ -1,10 +1,14 @@
 package com.basics.functionalInterface;
 
+import com.basics.hero.Gender;
+import com.basics.hero.Hero;
+import com.basics.hero.RandomNameCreator;
+import com.utilities.Calculations;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 
 
@@ -14,27 +18,17 @@ public class Main
     
     public static void main(String[] args)
     {
-        ArrayList<Hero> heros = new ArrayList<>();
-        
-        UnaryOperator<String> stringFormatter = (s) -> Character.toUpperCase(s.charAt(0))
-                + s.substring(1);
-        
-        for (int i = 0; i < MAX_HERO_NUMBER; i++)
-        {
-            heros.add(new Hero.Builder()
-                    .name(RandomNameCreator.getName(stringFormatter))
-                    .height(new Random().nextInt(55) + 150).isRanged(true)
-                    .strength(9).agility(3).intelligence(4).build());
-        }
-        
+        List<Hero> heros = Hero.getHeros(MAX_HERO_NUMBER);
+    
         Map<Integer, List<Hero>> herosByHeight = heros
-                .stream()
-                .collect(Collectors.groupingBy(Hero::getHeight));
+            .stream()
+            .collect(Collectors.groupingBy(Hero::getHeight));
         
         
-        herosByHeight.forEach((index, heroList) -> {
-            System.out.println(index + " " + heroList);
+        herosByHeight.forEach((height, heroList) -> {
+            System.out.println(height + " " + heroList);
         });
+        
         
         //heros.stream()
         //.filter(h->h.getHeight()>170)

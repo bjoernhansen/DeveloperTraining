@@ -1,4 +1,4 @@
-package com.basics.functionalInterface;
+package com.basics.hero;
 
 @FunctionalInterface
 public interface HeroShouter
