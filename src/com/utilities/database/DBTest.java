@@ -13,7 +13,7 @@ public class DBTest
 	{
 		try 
 		{
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/java2", "root", "");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/3306", "root", "");
 			show(con);			
 			
 			Statement insertStatement = con.createStatement();

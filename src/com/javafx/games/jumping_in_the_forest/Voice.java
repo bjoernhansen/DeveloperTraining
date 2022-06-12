@@ -11,7 +11,7 @@ class Voice
         JUMP_1_SOUND_PATH = "sounds/jump_1.mp3",
         JUMP_2_SOUND_PATH = "sounds/jump_2.mp3";
         
-    private MediaPlayer 
+    private final MediaPlayer
         jump_1_sound,
         jump_2_sound;
 
