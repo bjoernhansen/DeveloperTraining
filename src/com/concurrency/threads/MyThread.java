@@ -12,7 +12,7 @@ public class MyThread extends Thread
 	private int i = 0;
 	
 	/* 
-	 * Ein Thread läuft solange sene run-Methode läuft
+	 * Ein Thread läuft so lange wie seine run-Methode läuft
 	 */
 	@Override
 	public void run() 

@@ -3,19 +3,19 @@ package com.java_basics.annotation.effective_java;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-public class ExceptionRunTests
+class BjoernRunTests
 {
-    private static final Class<ExceptionTest>
-        ANNOTATION_CLASS = ExceptionTest.class;
+    private static final Class<BjoernTest>
+        ANNOTATION_CLASS = BjoernTest.class;
     
     private static int
         annotatedMethods,
         passedMethods,
         allMethods;
     
-    public static void main(String[] args) throws ClassNotFoundException
+    public static void main(String[] args)
     {
-        invokeMethodsOf(Sample2.class);
+        invokeMethodsOf(Sample.class);
         System.out.printf("Report: %d annotated methods; %d passed Methods; %d all methods%n", annotatedMethods, passedMethods, allMethods);
     }
     
@@ -36,26 +36,7 @@ public class ExceptionRunTests
                 catch (InvocationTargetException e)
                 {
                     Throwable exception = e.getCause();
-                    boolean hasThrownValidException = false;
-                    Class<? extends Throwable> [] excTypes = method.getAnnotation(ExceptionTest.class).value();
-
-                    for( Class<? extends Throwable> excType : excTypes)
-                    {
-                        if(excType.isInstance(exception))
-                        {
-                            passedMethods++;
-                            hasThrownValidException = true;
-                            break;
-                        }
-                    }
-                    if(hasThrownValidException)
-                    {
-                        System.out.printf("Method %s: PASSED with Exception %s%n", method.getName(), exception);
-                    }
-                    else
-                    {
-                        System.out.printf("Method %s: FAILED with wrong Exception %s%n", method.getName(), exception);
-                    }
+                    System.out.printf("Method %s: FAILED with Exception %s%n", method.getName(), exception);
                 }
                 catch (Exception e)
                 {

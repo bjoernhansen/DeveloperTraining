@@ -45,9 +45,7 @@ public class IntStreamTesting
         Stream.of(1, 2, 3, 4, 5, 6)
               .mapToInt(Integer::intValue)
               .sum();
-        
-        
-        
+    
         IntStream.range(1, 200)
                  .map(i -> i * i)
                  .filter(i -> i % 35 == 0)
