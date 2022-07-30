@@ -85,16 +85,9 @@ public class IdeTricks {
             }
     
         }
-        
-        
-    
     
         System.out.println(someMethod(1, 2));
         System.out.println(someMethod(3, 4));
-        
-        
-        
-        
     }
     
 
