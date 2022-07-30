@@ -28,7 +28,7 @@ public class CollectorTesting
                                            .boxed()
                                            .collect(Collectors.toUnmodifiableList());
          
-        List<Hero> heros = Hero.getHeros(10);
+        List<Hero> heros = Hero.getHeroes(10);
     
         // Unmodifiable Map anlegen, welche Heros auf ihre Größe
         Map<Hero, Integer> map = heros.stream()

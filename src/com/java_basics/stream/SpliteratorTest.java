@@ -9,8 +9,8 @@ public class SpliteratorTest
 {
     public static void main(String[] args)
     {
-        List<Hero> heroList = Hero.getHeros(100);
-    
+        List<Hero> heroList = Hero.getHeroes(100);
+
         if (false)
         {
             // printing out hero height, usage of map function
@@ -19,7 +19,7 @@ public class SpliteratorTest
                     .forEach(System.out::println);
         }
 
-        Spliterator<Hero> heros1 = Hero.getHeros(10).spliterator();
+        Spliterator<Hero> heros1 = Hero.getHeroes(10).spliterator();
         Spliterator<Hero> heros2 = heros1.trySplit();
     
         System.out.println("heros1");

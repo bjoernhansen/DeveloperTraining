@@ -13,16 +13,15 @@ public class Main
     
     public static void main(String[] args)
     {
-        List<Hero> heros = Hero.getHeros(MAX_HERO_NUMBER);
+        List<Hero> heros = Hero.getHeroes(MAX_HERO_NUMBER);
     
         Map<Integer, List<Hero>> herosByHeight = heros
             .stream()
             .collect(Collectors.groupingBy(Hero::getHeight));
         
         
-        herosByHeight.forEach((height, heroList) -> {
-            System.out.println(height + " " + heroList);
-        });
+        herosByHeight.forEach((height, heroList) ->
+                System.out.println(height + " " + heroList));
         
         
         //heros.stream()

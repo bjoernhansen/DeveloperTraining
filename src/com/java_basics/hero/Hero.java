@@ -47,14 +47,14 @@ public class Hero implements Comparable<Hero>
         this.gender = Gender.getRandomGender();
         this.name = RandomNameCreator.createName(this.gender);
         this.height = this.gender.randomHeight();
-        this.isRanged = Calculations.tossUp() ? true : false;
+        this.isRanged = Calculations.tossUp();
         Talent.getValues()
               .forEach(talent -> talents.put(talent, Talent.getRandomValue()));
     }
     
-    public static List<Hero> getHeros(int numberOfHeros){
+    public static List<Hero> getHeroes(int numberOfHeroes){
         return Stream.generate(Hero::newInstance)
-                     .limit(numberOfHeros)
+                     .limit(numberOfHeroes)
                      .collect(Collectors.toList());
     }
     
@@ -91,7 +91,7 @@ public class Hero implements Comparable<Hero>
     
     public void announcement(){
         Gender gender = getGender();
-        System.out.println(String.format("%s %s, %s %s", gender.getTitle(), getName(), gender.getArticle(), gender.getDescription()));
+        System.out.printf("%s %s, %s %s%n", gender.getTitle(), getName(), gender.getArticle(), gender.getDescription());
     }
     
     public boolean checkMe(Predicate<Hero> checkFunction)

@@ -33,8 +33,6 @@ public class IdeTricks {
     static Logger logger = Logger.getAnonymousLogger();
 
 
-
-
     public Integer getValue() {
 
 
@@ -81,9 +79,9 @@ public class IdeTricks {
         {
             System.out.println(person.firstName);
     
-            if (person.firstName == "John Doe")
+            if ("John Doe".equals(person.firstName))
             {
-            
+                System.out.println(" Here is " + person.firstName);
             }
     
         }
