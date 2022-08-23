@@ -37,8 +37,13 @@ public class ListTester {
         List<List<String>> subSets = new ArrayList<>(groups.values());
 
         subSets.forEach(System.out::println);
-
-
+        
+        
+        List<String> list = List.of("1", "2", "3");
+    
+        // loest UnsupportedOperationException aus
+        list.set(1, "4");
+        list.forEach(System.out::println);
     }
 
 
