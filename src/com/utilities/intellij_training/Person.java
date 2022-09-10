@@ -21,8 +21,6 @@ public class Person implements Walkable{
     
     public void setFirstName(String firstName)
     {
-        
-        
         this.firstName = firstName;
     }
     
