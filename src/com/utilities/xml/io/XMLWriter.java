@@ -1,4 +1,4 @@
-package com.utilities.xml;
+package com.utilities.xml.io;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
