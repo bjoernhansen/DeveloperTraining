@@ -1,8 +1,8 @@
-package com.concurrency.rmi.gumball.state;
+package com.concurrency.rmi.gumball.machine.state;
 
 
 
-import com.concurrency.rmi.gumball.GumballMachine;
+import com.concurrency.rmi.gumball.machine.GumballMachine;
 
 import java.util.EnumMap;
 

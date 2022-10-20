@@ -1,20 +1,30 @@
-package com.concurrency.rmi.gumball;
+package com.concurrency.rmi.gumball.machine;
 
-import com.concurrency.rmi.gumball.state.State;
-import com.concurrency.rmi.gumball.state.StateProvider;
-import com.concurrency.rmi.gumball.state.StateType;
+import com.concurrency.rmi.gumball.machine.state.State;
+import com.concurrency.rmi.gumball.machine.state.StateProvider;
+import com.concurrency.rmi.gumball.machine.state.StateType;
 
-class GumballMachineImplementation implements GumballMachine
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
+public class GumballMachineImplementation extends UnicastRemoteObject implements GumballMachineRemote, GumballMachine
 {
-	int count;
+	private final String
+		location;
 	
-	State state;
+	private int
+		count;
 	
-	StateProvider stateProvider;
+	private State
+		state;
+	
+	private final StateProvider
+		stateProvider;
  
-	public GumballMachineImplementation(int numberGumballs)
+	public GumballMachineImplementation(String location, int numberGumballs) throws RemoteException
 	{
 		count = numberGumballs;
+		this.location = location;
 		stateProvider = new StateProvider(this);
  		if (numberGumballs > 0) {
 			state = stateProvider.getState(StateType.NO_QUARTER);
@@ -48,10 +58,22 @@ class GumballMachineImplementation implements GumballMachine
 	}
  
 	@Override
-	public int getCount() {
+	public int getCount(){
 		return count;
 	}
- 
+	
+	@Override
+	public String getLocation() throws RemoteException
+	{
+		return location;
+	}
+	
+	@Override
+	public State getState() throws RemoteException
+	{
+		return state;
+	}
+	
 	@Override
 	public void refill(int count) {
 		this.count += count;
@@ -68,6 +90,8 @@ class GumballMachineImplementation implements GumballMachine
 		StringBuilder result = new StringBuilder();
 		result.append("\nMighty Gumball, Inc.");
 		result.append("\nJava-enabled Standing Gumball Model #2004");
+		result.append("\nLocation: ");
+		result.append(location);
 		result.append("\nInventory: ");
 		result.append(count);
 		result.append(" gumball");

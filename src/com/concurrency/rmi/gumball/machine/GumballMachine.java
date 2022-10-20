@@ -1,6 +1,6 @@
-package com.concurrency.rmi.gumball;
+package com.concurrency.rmi.gumball.machine;
 
-import com.concurrency.rmi.gumball.state.StateType;
+import com.concurrency.rmi.gumball.machine.state.StateType;
 
 public interface GumballMachine
 {
@@ -12,9 +12,9 @@ public interface GumballMachine
     
     void releaseBall();
     
-    int getCount();
-    
     void refill(int count);
     
     void setState(StateType stateType);
+    
+    int getCount();
 }

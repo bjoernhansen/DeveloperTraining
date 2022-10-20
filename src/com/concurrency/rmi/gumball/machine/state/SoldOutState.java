@@ -1,4 +1,4 @@
-package com.concurrency.rmi.gumball.state;
+package com.concurrency.rmi.gumball.machine.state;
 
 class SoldOutState extends AbstractState
 {

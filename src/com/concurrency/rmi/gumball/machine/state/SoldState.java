@@ -1,4 +1,4 @@
-package com.concurrency.rmi.gumball.state;
+package com.concurrency.rmi.gumball.machine.state;
 
 class SoldState extends AbstractState
 {
@@ -20,7 +20,7 @@ class SoldState extends AbstractState
 	@Override
 	public void dispense() {
 		releaseBallFromGumballMachine();
-		if (isGumballMachineEmpty()) {
+		if (!isGumballMachineEmpty()) {
 			setGumballMachineState(StateType.NO_QUARTER);
 		} else {
 			System.out.println("Oops, out of gumballs!");
