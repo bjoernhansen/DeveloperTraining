@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="241.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="training.javafx.gui.new_window.Window2Controller">
+   <TextField fx:id="textField" layoutX="69.0" layoutY="60.0" promptText="write and send..."/>
+   <Button layoutX="251.0" layoutY="60.0" mnemonicParsing="false" onAction="#sendAction" text="Send"/>
+</AnchorPane>

@@ -80,3 +80,6 @@ fabric.properties
 /.idea/DeveloperTraining.iml
 /.idea/sonarlint/issuestore/
 /.idea/inspectionProfiles/Project_Default.xml
+/.gradle/
+/.idea/
+/build/
