@@ -39,8 +39,7 @@ public class MainController {
 			stage.setTitle("new Window");
 			stage.setX(100);
 
-			Parent pane2 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Window2.fxml")));
-
+			Parent pane2 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/new_window_2.fxml")));
 
 			if (pane2 != null) {
 				Scene scene = new Scene(pane2);
@@ -48,15 +47,12 @@ public class MainController {
 				stage.setScene(scene);
 				stage.show();
 			}
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 	}
 	
 	public void initialize() {
 	System.out.println("init main Controller...");
 	}
-
 }

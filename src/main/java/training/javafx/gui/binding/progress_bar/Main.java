@@ -19,7 +19,7 @@ public class Main extends Application
             BorderPane root = new BorderPane();
             Scene scene = new Scene(root, 400, 400);
             scene.getStylesheets().add(
-                    Objects.requireNonNull(getClass().getResource("application.css"))
+                    Objects.requireNonNull(getClass().getResource("/css/application.css"))
                            .toExternalForm());
             Button b1 = new Button("+1");
             Button b2 = new Button("-1");

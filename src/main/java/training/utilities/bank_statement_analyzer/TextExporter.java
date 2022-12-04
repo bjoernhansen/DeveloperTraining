@@ -1,6 +1,6 @@
 package training.utilities.bank_statement_analyzer;
 
-public class TextExporter implements Exporter
+class TextExporter implements Exporter
 {
     @Override
     public String export(final SummaryStatistics summaryStatistics)

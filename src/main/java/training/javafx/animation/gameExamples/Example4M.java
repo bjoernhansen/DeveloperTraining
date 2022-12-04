@@ -56,7 +56,7 @@ public class Example4M extends Application
         gc.setStroke( Color.BLACK );
         gc.setLineWidth(1);
 
-        Image bullseye = new Image("training/javafx/animation/gameExamples/pictures/bullseye.png");
+        Image bullseye = new Image("pictures/bullseye.png");
 
         new AnimationTimer()
         {

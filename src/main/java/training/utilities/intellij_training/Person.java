@@ -3,12 +3,15 @@ package training.utilities.intellij_training;
 import java.util.Objects;
 
 
-public class Person implements Walkable{
-
+public class Person implements Walkable
+{
     private String firstName;
+    
     private String lastName;
-
-    public Person() {
+    
+    
+    public Person()
+    {
         this.firstName = "Klaus";
         this.lastName = "Peter";
     }
@@ -34,7 +37,8 @@ public class Person implements Walkable{
     }
     
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "Person{ " + firstName + " " + lastName + " }";
     }
     

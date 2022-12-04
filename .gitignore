@@ -83,3 +83,4 @@ fabric.properties
 /.gradle/
 /.idea/
 /build/
+/logs/

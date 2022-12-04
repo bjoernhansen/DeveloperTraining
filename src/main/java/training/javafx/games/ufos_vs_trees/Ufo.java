@@ -7,7 +7,7 @@ import javafx.scene.shape.Circle;
 
 class Ufo extends GameObject
 {
-    private static final String UFO_IMAGE_PATH = "images/ufo.png";
+    private static final String UFO_IMAGE_PATH = "/pictures/ufo.png";
     
     static final double
         UFO_RADIUS = 50,

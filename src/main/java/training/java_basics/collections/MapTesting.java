@@ -33,8 +33,8 @@ public class MapTesting {
         Stream.of(new Object[][] {
                 { "data1", ASSET_TYPE_PHOTO },
                 { "data2", 300 },
-                { "data1", 40 },
-                { "data2", null },
+                { "data3", 40 },
+                { "data4", "darf nicht null sein" },
                 }).collect(Collectors.toMap(data -> (String) data[0], data -> data[1]));
         }
 }

@@ -25,9 +25,9 @@ import static training.javafx.games.ufos_vs_trees.Ufo.UFO_RADIUS;
 public class UfosVsTrees extends Application
 {
     private static final String
-        BACKGROUND_IMAGE_PATH = "images/pavement.jpg",
-        CRASH_SOUND_PATH =      "sounds/crash.m4a",
-        UFO_SOUND_PATH =        "sounds/ufo.wav";
+        BACKGROUND_IMAGE_PATH = "/pictures/pavement.jpg",
+        CRASH_SOUND_PATH = "/sounds/crash.m4a",
+        UFO_SOUND_PATH = "/sounds/ufo.wav";
 
     private static final Dimension 
         SCREEN_SIZE = new Dimension(1024, 768);
@@ -39,8 +39,11 @@ public class UfosVsTrees extends Application
         TREE_GROWTH_RADIUS = 4;
     
     private Pane root;
+    
     private Scene scene;
+    
     private final List<GameObject> trees = new ArrayList<>();
+    
     private Ufo ufo;
     
     private MediaPlayer 

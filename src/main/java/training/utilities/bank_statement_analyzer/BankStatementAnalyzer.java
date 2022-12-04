@@ -7,14 +7,11 @@ import java.nio.file.Paths;
 import java.util.List;
 
 class BankStatementAnalyzer {
-    private static final String RESOURCES = "src/com/utilities/bank_statement_analyzer/";
-    
-
     void analyze(final String fileName,
                         final BankStatementParser bankStatementParser,
                         final Exporter exporter) throws IOException {
 
-        final Path path = Paths.get(RESOURCES + fileName);
+        final Path path = Paths.get(fileName);
         final List<String> lines = Files.readAllLines(path);
 
         final List<BankTransaction> bankTransactions = bankStatementParser.parseLinesFrom(lines);

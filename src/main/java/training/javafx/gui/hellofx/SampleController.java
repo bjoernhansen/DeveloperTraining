@@ -9,6 +9,7 @@ import javafx.event.ActionEvent;
 public class SampleController {
 
 	@FXML TextField textField;
+	
 	@FXML Label label;
 	
 	
@@ -17,5 +18,4 @@ public class SampleController {
 		b.setText("*******");
 		label.setText(textField.getText());
 	}
-	
 }

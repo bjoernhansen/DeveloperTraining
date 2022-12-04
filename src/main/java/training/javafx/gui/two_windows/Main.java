@@ -16,7 +16,7 @@ public class Main extends Application {
 		try {
 			BorderPane root = new BorderPane();
 			Scene scene = new Scene(root,400,400);
-			scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("application.css"))
+			scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/css/application.css"))
 											  .toExternalForm());
 			primaryStage.setScene(scene);
 			

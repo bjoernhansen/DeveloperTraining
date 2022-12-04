@@ -36,9 +36,9 @@ public class Example3T
 
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
-        Image earth = new Image("training/javafx/animation/gameExamples/pictures/earth.png");
-        Image sun = new Image("training/javafx/animation/gameExamples/pictures/sun.png");
-        Image space = new Image("training/javafx/animation/gameExamples/pictures/space.png");
+        Image earth = new Image("pictures/earth.png");
+        Image sun = new Image("pictures/sun.png");
+        Image space = new Image("pictures/space.png");
 
         Timeline gameLoop = new Timeline();
         gameLoop.setCycleCount(Timeline.INDEFINITE);

@@ -19,10 +19,9 @@ public class Main1 extends Application {
 			Label label1 = new Label();
 			Label label2 = new Label();
 			ProgressIndicator pi = new ProgressIndicator();
-			Button b1 = new Button("Start");
+			Button button = new Button("Start");
 			
-			
-			b1.setOnAction(e->{
+			button.setOnAction(e->{
 				// hier Task und Thread erzeugen / starten
 				Task<String>  task = createTask();
 				Thread t = new Thread(task);
@@ -32,7 +31,7 @@ public class Main1 extends Application {
 				label2.textProperty().bind(task.valueProperty());// updateValue
 				pi.progressProperty().bind(task.progressProperty());//updateProgress
 			});
-			root.getChildren().addAll(b1,pi,label1,label2);
+			root.getChildren().addAll(button,pi,label1,label2);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {

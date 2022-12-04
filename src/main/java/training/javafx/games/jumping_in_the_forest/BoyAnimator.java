@@ -22,7 +22,7 @@ class BoyAnimator
     {
         this.animation = new SpriteAnimation(   
                 view,
-                Duration.millis(1000), // TODO Konstante festlegeb
+                Duration.millis(1000), // TODO Konstante festlegen
                 COUNT, 
                 COLUMNS, 
                 OFFSET_X, OFFSET_Y,

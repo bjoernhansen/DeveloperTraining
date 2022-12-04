@@ -3,6 +3,7 @@ package training.javafx.games.jumping_in_the_forest;
 import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import training.javafx.games.algebra.Math;
 import javafx.animation.AnimationTimer;
@@ -20,7 +21,7 @@ import javafx.stage.Stage;
 public class JumpingInTheForest extends Application 
 {
     private static final String
-        BACKGROUND_IMAGE_PATH = "images/forest.jpg";
+        BACKGROUND_IMAGE_PATH = "/pictures/forest.jpg";
                 
     static final Dimension 
         SCREEN_SIZE = new Dimension(1024, 768);
@@ -155,17 +156,23 @@ public class JumpingInTheForest extends Application
     }
 
     private void moveBackground()
-    {        
-        this.scene.setFill(  new ImagePattern(new Image(getBackgroundImageUrl()),
-                            -this.boy.getView().getLayoutX(), 
-                            8,
-                            SCREEN_SIZE.height, SCREEN_SIZE.height, false));        
+    {
+        ImagePattern imagePattern = new ImagePattern(
+            new Image(getBackgroundImageUrl()),
+            -this.boy.getView().getLayoutX(),
+            8,
+            SCREEN_SIZE.width,
+            SCREEN_SIZE.height,
+            false);
+        
+        this.scene.setFill(imagePattern);
         this.root.setLayoutX(this.root.getLayoutX() - this.boy.getVelocity().getX());
     }
     
     private String getBackgroundImageUrl()
     {
-        return getClass().getResource(JumpingInTheForest.BACKGROUND_IMAGE_PATH).toString();
+        return Objects.requireNonNull(getClass().getResource(JumpingInTheForest.BACKGROUND_IMAGE_PATH))
+                      .toString();
     }
     
     public static void main(String[] args)

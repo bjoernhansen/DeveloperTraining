@@ -8,10 +8,10 @@ import javafx.scene.shape.Circle;
 
 class Tree extends GameObject
 {
-    private static final String STONE_CIRCLE_IMAGE_PATH = "images/stone_circle.png";
-    private static final String[] TREE_IMAGE_PATH = {  "images/tree_1.png",
-                                                        "images/tree_2.png",
-                                                        "images/tree_3.png"};
+    private static final String STONE_CIRCLE_IMAGE_PATH = "/pictures/stone_circle.png";
+    private static final String[] TREE_IMAGE_PATH = {  "/pictures/tree_1.png",
+                                                        "/pictures/tree_2.png",
+                                                        "/pictures/tree_3.png"};
     
     Tree()
     {

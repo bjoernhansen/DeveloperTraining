@@ -26,9 +26,7 @@ public class Main2 extends Application {
 			label2.textProperty().bind(service.valueProperty());// updateValue
 			pi.progressProperty().bind(service.progressProperty());//updateProgress
 			
-			
-			// hier  Listener 
-			// Binding ODER Listener
+			// hier Binding ODER Listener
 			service.valueProperty().addListener((obsValue,oldValue,newValue)->{
 				if(newValue!=null) {
 					// label2.setText(newValue);
@@ -47,8 +45,6 @@ public class Main2 extends Application {
 			e.printStackTrace();
 		}
 	}
-	
-	
 	
 	public static void main(String[] args) {
 		launch(args);

@@ -11,7 +11,7 @@ import java.io.IOException;
 public class AudioTesting
 {
     private static final String
-        SOUND_PATH = "src/com/java_basics/audio/sounds/announcer_bonus_credit.wav";
+        SOUND_PATH = "src/main/resources/sounds/announcer_bonus_credit.wav";
     
     
     public static void main(String[] args) throws UnsupportedAudioFileException, LineUnavailableException, IOException, InterruptedException

@@ -1,5 +1,5 @@
 package training.utilities.bank_statement_analyzer;
 
-public interface Exporter {
+interface Exporter {
     String export(SummaryStatistics summaryStatistics);
 }

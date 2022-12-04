@@ -12,7 +12,7 @@ import org.jdom2.input.SAXBuilder;
 import javafx.scene.control.TreeItem;
 
 
-public class CDTreeCreator 
+class CDTreeCreator
 {	
 	public static TreeItem<String> createTree(String documentPath) 
 	{		

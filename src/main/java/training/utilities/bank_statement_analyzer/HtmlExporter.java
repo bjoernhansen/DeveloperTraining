@@ -1,6 +1,6 @@
 package training.utilities.bank_statement_analyzer;
 
-public class HtmlExporter implements Exporter {
+class HtmlExporter implements Exporter {
     @Override
     public String export(final SummaryStatistics summaryStatistics) {
         String result = "<!doctype html>";

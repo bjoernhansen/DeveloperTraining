@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         SqrType sqrType = IS_SQR ? SqrType.SQR : SqrType.NO_SQR;
 
-        // example for data retrival
+        // example for data retrieval
         int linkDateOffset = sqrType.getOffset(PackagingBriefingDateOffsetType.LINKDATE);
         String linkDateFeatureKey = PackagingBriefingDateOffsetType.LINKDATE.getFeatureKey();
 

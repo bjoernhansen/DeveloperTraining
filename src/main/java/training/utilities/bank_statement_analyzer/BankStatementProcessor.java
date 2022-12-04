@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.DoubleSummaryStatistics;
 import java.util.List;
 
-public class BankStatementProcessor {
+class BankStatementProcessor {
 
     private final List<BankTransaction> bankTransactions;
 

@@ -17,7 +17,7 @@ import javafx.scene.shape.Rectangle;
 class Boy extends GameObject
 {    
     private static final String 
-        BOY_IMAGE_PATH = "images/boy.png";
+        BOY_IMAGE_PATH = "/pictures/boy.png";
     
     private final Image
         boyImage = new Image(fromUrlOf(BOY_IMAGE_PATH));

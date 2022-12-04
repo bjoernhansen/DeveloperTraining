@@ -6,8 +6,6 @@ import java.util.Objects;
 import javafx.application.Application;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.DoubleProperty;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
@@ -23,10 +21,10 @@ public class Main extends Application {
 			BorderPane root = new BorderPane();
 			Scene scene = new Scene(root, 400, 400);
 			scene.getStylesheets().add(
-					Objects.requireNonNull(getClass().getResource("application.css"))
+					Objects.requireNonNull(getClass().getResource("/css/application.css"))
 						   .toExternalForm());
 
-			Media media = new Media(new File("src/com/javafx/gui/multimedia/chrome_japan.mp4").toURI().toString());
+			Media media = new Media(new File("src/main/resources/sounds/chrome_japan.mp4").toURI().toString());
 			
 			MediaPlayer m = new MediaPlayer(media);
 			m.setAutoPlay(true);

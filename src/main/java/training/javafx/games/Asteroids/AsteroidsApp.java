@@ -24,15 +24,22 @@ import javafx.stage.Stage;
 
 public class AsteroidsApp extends Application
 {
-    public static final String PAVEMENT_IMG_PATH = "img/pavement.jpg";
+    public static final String
+        PAVEMENT_IMG_PATH = "/pictures/pavement.jpg";
     
-    private Pane root;
-    private Scene scene;
+    private Pane
+        root;
+    private Scene
+        scene;
     
-    private final List<GameObject> bullets = new ArrayList<>();
-    private final List<GameObject> enemies = new ArrayList<>();
+    private final List<GameObject>
+        bullets = new ArrayList<>();
+    private final List<GameObject>
+        enemies = new ArrayList<>();
     
-    private GameObject player;
+    private GameObject
+        player;
+    
     
     private Parent createContent()
     {

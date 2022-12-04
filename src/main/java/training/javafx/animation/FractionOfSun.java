@@ -14,11 +14,14 @@ import java.util.Objects;
 
 public class FractionOfSun extends Application
 {
+    private static final String
+        IMAGE_FILE_PATH = "/pictures/sun_2.png";
+    
     @Override
     public void start(Stage stage)
     {
         // load the image
-        Image image = new Image(fromUrlOf("gameExamples/pictures/sun_2.png"));
+        Image image = new Image(fromUrlOf(IMAGE_FILE_PATH));
 
         // simple displays ImageView the image as is
         ImageView iv1 = new ImageView();

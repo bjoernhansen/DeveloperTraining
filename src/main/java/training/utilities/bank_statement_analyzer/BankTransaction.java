@@ -3,7 +3,7 @@ package training.utilities.bank_statement_analyzer;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class BankTransaction {
+class BankTransaction {
     private final LocalDate date;
     private final double amount;
     private final String description;

@@ -56,7 +56,7 @@ public class Example5 extends Application
         gc.setLineWidth(1);
         
         Sprite briefcase = new Sprite();
-        briefcase.setImage("training/javafx/animation/gameExamples/pictures/briefcase.png");
+        briefcase.setImage("pictures/briefcase.png");
         briefcase.setPosition(200, 0);
         
         ArrayList<Sprite> moneybagList = new ArrayList<>();
@@ -64,7 +64,7 @@ public class Example5 extends Application
         for (int i = 0; i < 15; i++)
         {
             Sprite moneybag = new Sprite();
-            moneybag.setImage("training/javafx/animation/gameExamples/pictures/moneybag.png");
+            moneybag.setImage("pictures/moneybag.png");
             double px = 350 * Math.random() + 50;
             double py = 350 * Math.random() + 50;          
             moneybag.setPosition(px,py);

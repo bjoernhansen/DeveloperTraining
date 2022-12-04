@@ -12,6 +12,8 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
+import java.util.Objects;
+
 public class EarthTravelingAroundSun extends Application
 {   
     @Override
@@ -28,9 +30,9 @@ public class EarthTravelingAroundSun extends Application
      
         GraphicsContext gc = canvas.getGraphicsContext2D();
       
-        Image earth = new Image(fromUrlOf( "gameExamples/pictures/earth_2.png") );
-        Image sun   = new Image( fromUrlOf("gameExamples/pictures/sun_2.png" ));
-        Image space = new Image( fromUrlOf("gameExamples/pictures/space_2.jpg") );
+        Image earth = new Image(fromUrlOf( "/pictures/earth_2.png") );
+        Image sun   = new Image( fromUrlOf("/pictures/sun_2.png" ));
+        Image space = new Image( fromUrlOf("/pictures/space_2.jpg") );
      
         final long startNanoTime = System.nanoTime();
      
@@ -64,7 +66,8 @@ public class EarthTravelingAroundSun extends Application
     
     private String fromUrlOf(String path)
     {
-        return getClass().getResource(path).toString();
+        return Objects.requireNonNull(getClass().getResource(path))
+                      .toString();
     }
 
     public static void main(String[] args)

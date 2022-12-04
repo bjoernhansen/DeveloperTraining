@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="421.0" prefWidth="562.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="training.javafx.gui.multiple_fxml_and_controller.MainController">
+	<center>
+		<TabPane prefHeight="400.0" prefWidth="449.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+			<Tab text="Home">
+				<fx:include source="/fxml/include_home.fxml"/>
+			</Tab>
+			<Tab text="About">
+				<fx:include source="/fxml/include_about.fxml"/>
+			</Tab>
+			<Tab text="Contact">
+				<fx:include source="/fxml/include_contact.fxml"/>
+			</Tab>
+		</TabPane>
+	</center>
+</BorderPane>

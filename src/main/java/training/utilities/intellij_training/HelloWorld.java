@@ -10,19 +10,11 @@ public class HelloWorld
 {
     static String[] myRandomStrings = {"sdiashfdfhfm FDFDSIFIFHFADSOFADSH", "dfsdf", "dfdf"};
     
-    
     public static void main(String[] args)
     {
-        
-        
         Map<String, Integer> myMapStringIntegerMap = Stream.of(myRandomStrings)
                                                            .collect(Collectors.toUnmodifiableMap(identity(), String::length));
-        
-        
         myMapStringIntegerMap.entrySet()
                              .forEach(System.out::println);
-        
-        
     }
-    
 }

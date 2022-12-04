@@ -1,6 +1,6 @@
 package training.utilities.bank_statement_analyzer;
 
 @FunctionalInterface
-public interface BankTransactionFilter {
+interface BankTransactionFilter {
     boolean test(BankTransaction bankTransaction);
 }

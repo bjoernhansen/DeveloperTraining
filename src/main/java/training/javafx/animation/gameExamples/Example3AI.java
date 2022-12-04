@@ -31,14 +31,14 @@ public class Example3AI extends Application
 
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
-        Image earth = new Image("training/javafx/animation/gameExamples/pictures/earth.png");
-        Image sun   = new Image("training/javafx/animation/gameExamples/pictures/sun.png");
-        Image space = new Image("training/javafx/animation/gameExamples/pictures/space.png");
+        Image earth = new Image("pictures/earth.png");
+        Image sun   = new Image("pictures/sun.png");
+        Image space = new Image("pictures/space.png");
 
         AnimatedImage ufo = new AnimatedImage();
         Image[] imageArray = new Image[6];
         for (int i = 0; i < 6; i++)
-            imageArray[i] = new Image( "training/javafx/animation/gameExamples/pictures/ufo_" + i + ".png" );
+            imageArray[i] = new Image( "pictures/ufo_" + i + ".png" );
         ufo.frames = imageArray;
         ufo.duration = 0.100;
 

@@ -20,36 +20,34 @@ import javafx.stage.Stage;
 
 public class Racing extends Application
 {
-    private static final String 
-        groundURL = "pavement.jpg";
+    private static final String
+        GROUND_URL = "/pictures/pavement.jpg";
     
     private static final Dimension 
-        CAR_SIZE = new Dimension (100, 60),
+        CAR_SIZE = new Dimension (100, 60);
+    
+    private static final Dimension
         SCREEN_SIZE = new Dimension (800, 600);
     
-    private Pane root;
-    private Scene scene;    
+    private Pane
+        root;
     
-    private final List<GameObject> trees = new ArrayList<>();
-    private GameObject player;
+    private Scene
+        scene;
+    
+    private final List<GameObject>
+        trees = new ArrayList<>();
+    
+    private GameObject
+        player;
     
     
     private Parent createContent()
     {
         root = new Pane();
         root.setPrefSize(SCREEN_SIZE.width, SCREEN_SIZE.height);
-        
-        
-        
         player = new Player();
-        
-        
-        
-        
-        
-        
         addGameObject(player, (SCREEN_SIZE.width-CAR_SIZE.width)/2.0, (SCREEN_SIZE.height-CAR_SIZE.width)/2.0);
-        
         AnimationTimer timer = new AnimationTimer()
         {            
             @Override
@@ -60,7 +58,6 @@ public class Racing extends Application
         };
         timer.start();
         
-          
         return root;
     }
      
@@ -96,7 +93,7 @@ public class Racing extends Application
         player.update();
         
         scene.setFill(new ImagePattern(
-                new Image(groundURL), 
+                new Image(GROUND_URL),
                 -player.getView().getTranslateX() , 
                 -player.getView().getTranslateY() , 
                 300, 300, false));  
@@ -104,16 +101,12 @@ public class Racing extends Application
         root.relocate(  root.getLayoutX() - player.getVelocity().getX(),
                         root.getLayoutY() - player.getVelocity().getY());
         
-        
-         
-        
         if(Math.random() < 0.02)
         {
             addEnemy(   new Enemy(), 
                         Math.random() * root.getWidth(), 
                         Math.random() * root.getHeight());
         }
-        
     }
     
     private static class Player extends GameObject
@@ -122,7 +115,7 @@ public class Racing extends Application
         {
             super(new Rectangle(CAR_SIZE.width, CAR_SIZE.height, Color.BLUE));   
             this.setVelocity(new Point2D(-1, 0));        
-            ((Rectangle)this.getView()).setFill(new ImagePattern(new Image("car.png"), 0, 0, CAR_SIZE.width, CAR_SIZE.height, false));
+            ((Rectangle)this.getView()).setFill(new ImagePattern(new Image("/pictures/car.png"), 0, 0, CAR_SIZE.width, CAR_SIZE.height, false));
         }        
     }
     
@@ -134,19 +127,12 @@ public class Racing extends Application
         }        
     }
     
-           
-    
     @Override
     public void start(Stage primaryStage)
     {        
         this.scene = new Scene(createContent());        
                 
-        primaryStage.setScene(scene);   
-            
-        
-        
-        
-        
+        primaryStage.setScene(scene);
         primaryStage.getScene().setOnKeyPressed(e-> {
             if(e.getCode() == KeyCode.LEFT)
             {
@@ -158,11 +144,9 @@ public class Racing extends Application
             }
             else if(e.getCode() == KeyCode.SPACE)
             {
-            
+                System.out.println("Pressed space!");
             }
-        });   
-               
-        
+        });
         primaryStage.show();        
     }
 
@@ -170,11 +154,4 @@ public class Racing extends Application
     {
         launch(args);
     }
-    
-    
-    
-    
-    
-    
-    
 }

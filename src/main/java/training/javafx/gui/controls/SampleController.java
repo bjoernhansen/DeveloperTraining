@@ -20,12 +20,6 @@ public class SampleController implements Initializable{
 			b.setOnAction((e)-> System.out.println(e.getSource()));
 			
 			tilePane.getChildren().add(b);
-			
 		}
-		
 	}
-	
-	
-
-	
 }

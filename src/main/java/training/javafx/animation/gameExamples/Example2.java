@@ -41,7 +41,7 @@ public class Example2
         gc.fillText("Hello, World!", 60, 50);
         gc.strokeText("Hello, World!", 60, 50);
 
-        Image earth = new Image("training/javafx/animation/gameExamples/pictures/earth.png");
+        Image earth = new Image("pictures/earth.png");
 
         gc.drawImage(earth, 180, 100);
 

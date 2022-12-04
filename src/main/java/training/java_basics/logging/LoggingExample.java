@@ -22,7 +22,7 @@ public class LoggingExample{
     
     public static void main(String[] args)throws IOException,SQLException{
         // Nachlesen zur Konfiguration: https://logging.apache.org/log4j/2.x/manual/configuration.html
-        
+        // https://www.baeldung.com/spring-boot-change-log4j2-location
         
         log.info("This is an info message");
         log.warn("This is a warn message");

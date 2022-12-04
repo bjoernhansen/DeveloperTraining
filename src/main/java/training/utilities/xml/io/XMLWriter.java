@@ -36,7 +36,7 @@ public class XMLWriter
 			
 			XMLOutputter outputter = new XMLOutputter(Format.getPrettyFormat());
 						
-			FileOutputStream out = new FileOutputStream("src/com/utilities/xml/out.xml");
+			FileOutputStream out = new FileOutputStream("logs/out.xml");
 			
 			outputter.output(doc, out);
 		}

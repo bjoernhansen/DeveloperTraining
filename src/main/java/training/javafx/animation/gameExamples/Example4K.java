@@ -73,11 +73,11 @@ public class Example4K extends Application
     
     private static void loadGraphics()
     {
-        left = new Image(getResource("pictures/left.png"));
-        leftGreen = new Image(getResource("pictures/leftG.png"));
+        left = new Image(getResource("/pictures/left.png"));
+        leftGreen = new Image(getResource("/pictures/leftG.png"));
         
-        right = new Image(getResource("pictures/right.png"));
-        rightGreen = new Image(getResource("pictures/rightG.png"));
+        right = new Image(getResource("/pictures/right.png"));
+        rightGreen = new Image(getResource("/pictures/rightG.png"));
     }
     
     private static String getResource(String filename)

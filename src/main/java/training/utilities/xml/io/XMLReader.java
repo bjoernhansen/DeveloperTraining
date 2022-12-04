@@ -21,7 +21,7 @@ public class XMLReader
         SAXBuilder builder = new SAXBuilder();
         try
         {
-            Document doc = builder.build(new File("src/com/utilities/xml/cd-catalog.xml"));
+            Document doc = builder.build(new File("src/main/resources/xml/cd-catalog.xml"));
 			// cd-catalog.xml
             Element menuBarElement = doc.getRootElement(); //<menubar>
             System.out.println(menuBarElement.getName()); //menubar>

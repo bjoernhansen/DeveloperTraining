@@ -11,6 +11,6 @@ public class SampleController {
 	void initialize() {
 		System.out.println("init...");
 		
-		this.cdTreeView.setRoot(CDTreeCreator.createTree("src/com/utilities/xml/cd-catalog.xml"));
+		this.cdTreeView.setRoot(CDTreeCreator.createTree("src/main/resources/xml/cd-catalog.xml"));
 	}
 }

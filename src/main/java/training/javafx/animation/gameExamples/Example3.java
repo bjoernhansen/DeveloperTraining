@@ -35,14 +35,14 @@ public class Example3
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
 
-        Image earth = new Image(Objects.requireNonNull(getClass().getResource("pictures/earth.png"))
+        Image earth = new Image(Objects.requireNonNull(getClass().getResource("/pictures/earth.png"))
                                        .toString());
-        Image sun = new Image(Objects.requireNonNull(getClass().getResource("pictures/sun.png"))
+        Image sun = new Image(Objects.requireNonNull(getClass().getResource("/pictures/sun.png"))
                                      .toString());
-        Image space = new Image(Objects.requireNonNull(getClass().getResource("pictures/space.png"))
+        Image space = new Image(Objects.requireNonNull(getClass().getResource("/pictures/space.png"))
                                        .toString());
 
-        System.out.println(getClass().getResource("pictures/earth.png"));
+        System.out.println(getClass().getResource("/pictures/earth.png"));
 
 
         final long startNanoTime = System.nanoTime();

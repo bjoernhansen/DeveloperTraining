@@ -12,12 +12,10 @@ import java.util.List;
 import java.util.Random;
 import java.util.ResourceBundle;
 
-public class SampleController  implements Initializable{
-
+public class SampleController  implements Initializable
+{
 	@FXML private Canvas canvas;
 	
-
-
 	private static List<ColorPoint> createPoints(int count){
 		List<ColorPoint> points = new ArrayList<>();
 		Random rand = new Random();
@@ -30,28 +28,18 @@ public class SampleController  implements Initializable{
 
 		}
 		return points;
-		
 	}
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		GraphicsContext gc = canvas.getGraphicsContext2D();
-
-
 		
 		List<ColorPoint> pointList = createPoints(10000);
 		for (ColorPoint colorPoint : pointList) {
 			gc.setStroke(colorPoint.getC());
 			gc.setFill(colorPoint.getC());
-		//	gc.strokeOval(colorPoint.getX(), colorPoint.getY(),5 , 5);
+			//	gc.strokeOval(colorPoint.getX(), colorPoint.getY(),5 , 5);
 			gc.fillOval(colorPoint.getX(), colorPoint.getY(),6 , 6);
-		
-			
 		}
-
-	}
-	
-	public static void main(String[] args) {
-		System.out.println(createPoints(50));
 	}
 }

@@ -13,9 +13,9 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			BorderPane root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Sample.fxml")));
+			BorderPane root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/canvas.fxml")));
 			Scene scene = new Scene(root);
-			scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("application.css"))
+			scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/css/application.css"))
 											  .toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
@@ -25,7 +25,6 @@ public class Main extends Application {
 	}
 	
 	public static void main(String[] args) {
-		
 		launch(args);
 	}
 }

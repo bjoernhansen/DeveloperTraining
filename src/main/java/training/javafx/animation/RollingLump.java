@@ -65,7 +65,7 @@ public class RollingLump extends Application implements EventHandler <KeyEvent>
         
         //path.setFill(Color.BLUE);
 
-        this.path.setFill(new ImagePattern(new Image(fromUrlOf("gameExamples/pictures/klumpen.png")), 20, 20, 140, 140, false));
+        this.path.setFill(new ImagePattern(new Image(fromUrlOf("/pictures/klumpen.png")), 20, 20, 140, 140, false));
         
         //root.getChildren().add(this.path);
 

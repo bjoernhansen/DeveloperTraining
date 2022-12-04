@@ -1,7 +1,7 @@
 package training.utilities.bank_statement_analyzer;
 
 @FunctionalInterface
-public interface BankTransactionSummarizer {
+interface BankTransactionSummarizer {
     double summarize(double accumulator, BankTransaction bankTransaction);
 }
 

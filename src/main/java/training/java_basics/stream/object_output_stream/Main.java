@@ -18,7 +18,7 @@ public class Main
 		
 		System.out.println(test.getClass());
 		
-		try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("src/com/basics/stream/object_output_stream/test.txt")))
+		try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("src/main/java/training/java_basics/stream/object_output_stream/test.txt")))
 		{
 			oos.writeObject(objects[2]);
 		} 

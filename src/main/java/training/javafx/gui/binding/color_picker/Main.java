@@ -16,10 +16,10 @@ public class Main extends Application
         try
         {
             BorderPane root = FXMLLoader
-                    .load(Objects.requireNonNull(getClass().getResource("Sample.fxml")));
+                    .load(Objects.requireNonNull(getClass().getResource("/fxml/color_picker.fxml")));
             Scene scene = new Scene(root, 400, 400);
             scene.getStylesheets().add(
-                    Objects.requireNonNull(getClass().getResource("application.css"))
+                    Objects.requireNonNull(getClass().getResource("/css/application.css"))
                            .toExternalForm());
             primaryStage.setScene(scene);
             primaryStage.show();

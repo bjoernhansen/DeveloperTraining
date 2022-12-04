@@ -22,5 +22,4 @@ public class SampleController implements Initializable
     {
         rect.fillProperty().bind(colorPicker.valueProperty());
     }
-
 }

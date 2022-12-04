@@ -3,12 +3,14 @@ package training.javafx.games.jumping_in_the_forest;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
+import java.util.Objects;
+
 
 class Voice
 {    
     private static final String     
-        JUMP_1_SOUND_PATH = "sounds/jump_1.mp3",
-        JUMP_2_SOUND_PATH = "sounds/jump_2.mp3";
+        JUMP_1_SOUND_PATH = "/sounds/jump_1.mp3",
+        JUMP_2_SOUND_PATH = "/sounds/jump_2.mp3";
         
     private final MediaPlayer
         jump_1_sound,
@@ -37,6 +39,7 @@ class Voice
     
     private String fromUrlOf(String path)
     {
-        return getClass().getResource(path).toString();
+        return Objects.requireNonNull(getClass().getResource(path))
+                      .toString();
     }
 }

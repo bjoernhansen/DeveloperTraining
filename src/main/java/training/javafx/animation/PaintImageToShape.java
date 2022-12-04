@@ -13,7 +13,7 @@ import java.util.Objects;
 
 public class PaintImageToShape extends Application
 {
-    private static final String RESSOURCE_ROOT_PATH = "gameExamples/pictures/";
+    private static final String RESSOURCE_ROOT_PATH = "/pictures/";
     private static final String sunURL = RESSOURCE_ROOT_PATH + "sun.png";
     private static final String briefcaseURL = RESSOURCE_ROOT_PATH + "briefcase.png";
     private static final String mauerURL = RESSOURCE_ROOT_PATH + "mauer_1.jpg";
