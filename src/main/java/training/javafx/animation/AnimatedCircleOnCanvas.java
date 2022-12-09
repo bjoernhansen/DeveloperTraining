@@ -24,10 +24,6 @@ public class AnimatedCircleOnCanvas extends Application {
     @Override public void start(Stage stage) {
         DoubleProperty x  = new SimpleDoubleProperty();
         DoubleProperty y  = new SimpleDoubleProperty();
-
-        int xPos = 0;
-        int yPos = 0;
-        
         
         Timeline timeline = new Timeline(
                 new KeyFrame(Duration.seconds(0),

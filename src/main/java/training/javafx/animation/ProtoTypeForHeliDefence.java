@@ -34,7 +34,7 @@ public class ProtoTypeForHeliDefence extends Application
             @Override
             public void handle(long now)
             {
-                x = x + 1;
+                x++;
                 
                 GraphicsContext graphicsContext2D = canvas.getGraphicsContext2D();
                 
