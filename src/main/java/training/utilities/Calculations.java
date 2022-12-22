@@ -10,10 +10,10 @@ public final class Calculations
         EPSILON = 0.000001;
     
     private final static double
-        ROOT05 = Math.sqrt(2)/2.0;
+        ROOT_05 = Math.sqrt(2)/2.0;
     
     private final static Point2D
-        ZERO_POINT = new Point2D.Float(0,0);
+        ORIGIN = new Point2D.Float(0,0);
         
     private static final double
         FWHM_FACTOR = 2 * Math.sqrt(2 * ln(2));
@@ -21,9 +21,9 @@ public final class Calculations
     private static final Random
         random = new Random();
         
-    private Calculations() throws Exception
+    private Calculations()
     {
-        throw new Exception();
+        throw new UnsupportedOperationException();
     }
 
     public static int randomIntValue(int valueRange)
