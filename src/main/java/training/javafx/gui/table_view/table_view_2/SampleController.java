@@ -1,4 +1,4 @@
-package training.javafx.gui.table_view;
+package training.javafx.gui.table_view.table_view_2;
 
 import java.net.URL;
 import java.util.Optional;

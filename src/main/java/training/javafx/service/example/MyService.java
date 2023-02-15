@@ -1,4 +1,4 @@
-package training.javafx.service;
+package training.javafx.service.example;
 
 import javafx.concurrent.Service;
 import javafx.concurrent.Task;

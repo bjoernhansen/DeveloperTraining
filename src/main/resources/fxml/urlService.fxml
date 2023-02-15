@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="training.javafx.service.url_service.SampleController">
+   <center>
+      <TabPane prefHeight="712.0" prefWidth="714.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="SourceCode">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="textArea" editable="false" layoutX="27.0" layoutY="24.0" prefHeight="619.0" prefWidth="661.0" wrapText="true" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="textFieldURL" text="Links">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="370.0" prefWidth="523.0">
+                     <children>
+                        <ListView fx:id="listView" layoutX="14.0" layoutY="14.0" prefHeight="652.0" prefWidth="135.0" />
+                        <TextArea fx:id="urlListTextField" layoutX="170.0" layoutY="15.0" prefHeight="650.0" prefWidth="526.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="browser" text="Browser">
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+   <top>
+      <FlowPane prefHeight="9.0" prefWidth="714.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="urlField" prefHeight="25.0" prefWidth="313.0" text="https://www.web.de" />
+            <Button fx:id="startButton" mnemonicParsing="false" onAction="#clicked" text="Start" />
+            <Label fx:id="label_1" prefHeight="17.0" prefWidth="179.0" textAlignment="CENTER">
+               <FlowPane.margin>
+                  <Insets left="30.0" />
+               </FlowPane.margin></Label>
+            <Label fx:id="label_2" />
+         </children>
+      </FlowPane>
+   </top>
+</BorderPane>

@@ -1,4 +1,4 @@
-package training.javafx.gui.table_view;
+package training.javafx.gui.table_view.table_view_2;
 
 import javafx.application.Application;
 import javafx.scene.Parent;
@@ -16,7 +16,7 @@ public class Main extends Application
     {
         try
         {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/table_view.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/table_view_2.fxml")));
             Scene scene = new Scene(root);
             scene.getStylesheets()
                  .add(Objects.requireNonNull(getClass().getResource("/css/application.css"))

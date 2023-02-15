@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+
+<BorderPane prefHeight="232.0" prefWidth="487.0"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="training.javafx.gui.table_view.table_view_1.SampleController">
+	<center>
+		<TableView fx:id="personTableView" editable="true"
+			prefHeight="191.0" prefWidth="469.0" BorderPane.alignment="CENTER">
+			<columns>
+				<TableColumn prefWidth="75.0" text="Id">
+					<cellValueFactory>
+						<PropertyValueFactory property="id" />
+
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn fx:id="vornameColumn" onEditCancel="#editCancel"
+					onEditCommit="#editCommit" onEditStart="#editStart" prefWidth="75.0"
+					text="Vorname">
+					<cellValueFactory>
+						<PropertyValueFactory property="vorname" /><!-- 
+							Attribute der Datenklasse -->
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn fx:id="nachnameColumn" prefWidth="75.0"
+					text="Nachname" onEditCancel="#editCancel" onEditCommit="#editCommit"
+					onEditStart="#editStart">
+					<cellValueFactory>
+						<PropertyValueFactory property="nachname" /><!-- 
+							Attribute der Datenklasse -->
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn prefWidth="75.0" text="Geburtsdateum">
+					<cellValueFactory>
+						<PropertyValueFactory property="geburtsdatum" /><!-- 
+							Attribute der Datenklasse -->
+					</cellValueFactory>
+				</TableColumn>
+			</columns>
+		</TableView>
+	</center>
+	<top>
+		<HBox alignment="TOP_RIGHT" prefHeight="41.0" prefWidth="360.0"
+			BorderPane.alignment="CENTER">
+			<children>
+				<TextField fx:id="inputVorname" prefHeight="25.0"
+					prefWidth="80.0" promptText="Vorname" />
+				<TextField fx:id="inputNachname" prefHeight="25.0"
+					prefWidth="80.0" promptText="Nachname" />
+				<DatePicker fx:id="inputDate" prefHeight="25.0"
+					prefWidth="136.0" promptText="Geburtsdatum" />
+				<Button mnemonicParsing="false" onAction="#save" text="Save" />
+				<Button mnemonicParsing="false" onAction="#delete" text="Schelete" />
+			</children>
+		</HBox>
+	</top>
+</BorderPane>
