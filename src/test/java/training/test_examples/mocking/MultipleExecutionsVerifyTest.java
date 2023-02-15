@@ -15,7 +15,7 @@ import static org.mockito.Mockito.when;
 
 
 @ExtendWith(MockitoExtension.class)
-public class testingMocks
+public class MultipleExecutionsVerifyTest
 {
     @Mock
     private NoiseMaker noiseMaker;
@@ -36,7 +36,7 @@ public class testingMocks
     {
         when(noiseMaker.makeNoise()).thenReturn(DESIRED_TEXT);
         noiseRepeater.setNumberOfRepeats(NUMBER_OF_REPEATS);
-        String noise = noiseRepeater.makeNoise();
+        String noise = noiseRepeater.generateNoise();
         
         verify(noiseMaker, times(NUMBER_OF_REPEATS)).makeNoise();
         assertThat(noise).isEqualTo(DESIRED_TEXT+DESIRED_TEXT+DESIRED_TEXT);

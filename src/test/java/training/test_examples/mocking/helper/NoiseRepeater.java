@@ -14,7 +14,7 @@ public class NoiseRepeater
         this.noiseMaker = noiseMaker;
     }
     
-    public String makeNoise()
+    public String generateNoise()
     {
         StringBuilder sb = new StringBuilder();
         for(int i = 0; i < numberOfRepeats; i++)
