@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane prefHeight="336.0" prefWidth="526.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="training.utilities.gson.from_file.SampleController">
+   <center>
+      <TableView fx:id="tableView" prefHeight="200.0" prefWidth="344.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="vornameCol" prefWidth="186.0" text="Vorname" />
+          <TableColumn  fx:id="nachnameCol" prefWidth="239.0" text="Nachname" />
+        </columns>
+      </TableView>
+   </center>
+   <top>
+       <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+           <TextField fx:id="vornameField" prefHeight="25.0" prefWidth="189.0" promptText="Vorname"/>
+           <TextField fx:id="nachnameField" prefHeight="25.0" prefWidth="174.0" promptText="Nachname"/>
+           <Button mnemonicParsing="false" onAction="#saveAction" prefHeight="25.0" prefWidth="120.0" text="Save"/>
+       </ToolBar>
+   </top>
+</BorderPane>
