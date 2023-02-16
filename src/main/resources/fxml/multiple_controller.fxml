@@ -4,7 +4,7 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="421.0" prefWidth="562.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="training.javafx.gui.multiple_fxml_and_controller.MainController">
+<BorderPane prefHeight="421.0" prefWidth="562.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="training.javafx.gui.switch_pane.example_1.MainController">
 	<center>
 		<TabPane prefHeight="400.0" prefWidth="449.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
 			<Tab text="Home">

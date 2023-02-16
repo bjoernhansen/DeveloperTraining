@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane fx:id="pane" prefHeight="245.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/8.0.111"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="training.javafx.gui.multiple_fxml_and_controller.HomeController">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="training.javafx.gui.switch_pane.example_1.HomeController">
     <TitledPane animated="false" layoutX="28.0" layoutY="51.0" prefHeight="172.0" prefWidth="304.0" text="Home">
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
             <Text layoutX="99.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home Home Home"/>

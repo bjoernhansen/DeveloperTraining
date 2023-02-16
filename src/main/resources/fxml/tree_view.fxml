@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.BorderPane?>
 
 
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="training.javafx.gui.tree_view.SampleController">
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="training.javafx.gui.views.tree.SampleController">
    <center>
       <TreeView fx:id="treeView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </center>

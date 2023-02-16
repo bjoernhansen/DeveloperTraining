@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="training.javafx.gui.table_view.table_view_2.SampleController">
+<BorderPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="training.javafx.gui.views.table.example_2.SampleController">
 	<center>
 		<TableView fx:id="tableView" prefHeight="570.0" prefWidth="700.0" BorderPane.alignment="CENTER">
 			<columns>

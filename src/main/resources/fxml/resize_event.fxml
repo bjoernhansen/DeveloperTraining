@@ -2,6 +2,6 @@
 	
 <?import javafx.scene.layout.BorderPane?>
 	
-<BorderPane fx:id="rootPane" xmlns:fx="http://javafx.com/fxml/1" fx:controller="training.javafx.gui.resize_event.SampleController">
+<BorderPane fx:id="rootPane" xmlns:fx="http://javafx.com/fxml/1" fx:controller="training.javafx.events.resize.SampleController">
 	<!-- TODO Add Nodes -->
 </BorderPane>
