@@ -16,7 +16,8 @@ public class JavaScriptEngine
             
             String s = String.valueOf(obj);
             System.out.println(obj + " " + s);
-        } catch(ScriptException e)
+        }
+        catch(ScriptException e)
         {
             // TODO Auto-generated catch block
             e.printStackTrace();
