@@ -8,10 +8,14 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.jdom:jdom2:2.0.6.1'
+    // Database Access
     implementation 'mysql:mysql-connector-java:8.0.31'
-    implementation 'commons-io:commons-io:2.11.0'
+    implementation 'com.zaxxer:HikariCP:5.0.1'
+    implementation 'org.hibernate:hibernate-core:6.2.0.CR3'
+    implementation 'org.mybatis:mybatis:3.5.12'
 
+    // Apache
+    implementation 'commons-io:commons-io:2.11.0'
     implementation 'org.apache.logging.log4j:log4j-core:2.19.0'
     implementation 'org.apache.logging.log4j:log4j-api:2.19.0'
     implementation 'org.apache.commons:commons-lang3:3.12.0'
@@ -21,10 +25,15 @@ dependencies {
     implementation 'org.apache.commons:commons-csv:1.9.0'
     implementation 'org.apache.pdfbox:pdfbox:2.0.27'
 
+    // Google
     implementation 'com.google.guava:guava:31.1-jre'
     implementation 'com.google.code.gson:gson:2.10.1'
+
+    // XML
+    implementation 'org.jdom:jdom2:2.0.6.1'
     implementation 'com.sun.xml.bind:jaxb-impl:2.3.3'
 
+    // Testing
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.0'
     testImplementation 'org.mockito:mockito-core:4.9.0'
     testImplementation 'org.mockito:mockito-junit-jupiter:4.9.0'

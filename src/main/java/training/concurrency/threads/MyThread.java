@@ -11,6 +11,7 @@ public class MyThread extends Thread
 	
 	private boolean stop = false;
 	
+	
 	private int i = 0;
 	
 	/* 
@@ -27,7 +28,6 @@ public class MyThread extends Thread
 		}		
 	// Thread Ende	
 	}
-
 	
 	private static void sleep()
 	{
@@ -58,13 +58,8 @@ public class MyThread extends Thread
 		t2.start();	
 		t3.start();	
 		
-		
-		
 		t1.setPriority(Thread.MIN_PRIORITY);
 		t2.setPriority(Thread.NORM_PRIORITY);
 		t3.setPriority(Thread.MAX_PRIORITY);
-		
 	}
-
-	
 }
