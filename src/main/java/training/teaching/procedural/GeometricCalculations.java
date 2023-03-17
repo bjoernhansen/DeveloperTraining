@@ -1,4 +1,4 @@
-package training.temp.teachingTest.procedural;
+package training.teaching.procedural;
 
 import java.security.InvalidParameterException;
 import java.util.stream.Stream;

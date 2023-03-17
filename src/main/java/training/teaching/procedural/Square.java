@@ -1,4 +1,4 @@
-package training.temp.teachingTest.procedural;
+package training.teaching.procedural;
 
 final class Square implements GeometricShape
 {

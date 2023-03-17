@@ -1,4 +1,4 @@
-package training.temp.teachingTest.oop;
+package training.teaching.oop;
 
 class Main
 {

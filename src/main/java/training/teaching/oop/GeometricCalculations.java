@@ -1,4 +1,4 @@
-package training.temp.teachingTest.oop;
+package training.teaching.oop;
 
 import java.util.stream.Stream;
 
