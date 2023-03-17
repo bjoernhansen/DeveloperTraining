@@ -1,6 +1,7 @@
-package training.database;
+package training.database.jdbc;
 
 import com.zaxxer.hikari.HikariDataSource;
+import training.database.jdbc.JdbcExample;
 
 import javax.sql.DataSource;
 import java.sql.Connection;

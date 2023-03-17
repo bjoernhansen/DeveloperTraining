@@ -20,6 +20,7 @@ public class TelemetryDiagnosticControls
         }
         telemetryClient.send(SOME_MESSAGE, "we don't care about this String");
         telemetryClient.configure("TestCaptor");
+        telemetryClient.receive();
     }
     
     public double receive()

@@ -1,4 +1,4 @@
-package training.database;
+package training.database.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -56,9 +56,9 @@ public class JdbcExample
         }
     }
     
-    static void printOutCustomers(Connection conn) throws SQLException
+    static void printOutCustomers(Connection connection) throws SQLException
     {
-        Statement selectAllStatement = conn.createStatement();
+        Statement selectAllStatement = connection.createStatement();
         ResultSet rs = selectAllStatement.executeQuery("SELECT * FROM customers");
     
         System.out.println("----------------------------------");

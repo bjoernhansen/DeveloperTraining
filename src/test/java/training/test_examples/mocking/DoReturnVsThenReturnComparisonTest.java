@@ -28,7 +28,8 @@ public class DoReturnVsThenReturnComparisonTest
     public void doVsWhenReturnTest()
     {
         when(client.receive()).thenReturn(0.1);
-    
+        when(client.isOnline()).thenReturn(true);
+        
         // when(client.receive()).thenReturn(Boolean.TRUE); // <-- Fehler zur Kompilierzeit
         
         // doReturn(Boolean.TRUE).when(client).receive(); // <-- würde kompilieren, aber es gibt einen Laufzeitfehler
