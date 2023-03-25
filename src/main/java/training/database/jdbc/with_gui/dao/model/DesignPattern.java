@@ -1,4 +1,4 @@
-package training.design_pattern.dao.model;
+package training.database.jdbc.with_gui.dao.model;
 
 import java.io.Serializable;
 

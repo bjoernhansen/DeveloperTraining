@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import static training.database.DatabaseAccessData.DEFAULT_DATABASE;
 import static training.database.DatabaseAccessData.PASSWORD;
 import static training.database.DatabaseAccessData.URL;
 import static training.database.DatabaseAccessData.USER;
@@ -22,7 +23,7 @@ public class JdbcExample
 {
     public static void main(String[] args)
     {
-        try(Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);)
+        try(Connection connection = DriverManager.getConnection(URL + DEFAULT_DATABASE, USER, PASSWORD);)
         {
             // "0" means disabling the timeout, when doing isValid checks
             boolean isValid = connection.isValid(0);

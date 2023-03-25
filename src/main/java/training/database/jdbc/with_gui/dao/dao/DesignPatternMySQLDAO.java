@@ -1,7 +1,7 @@
-package training.design_pattern.dao.dao;
+package training.database.jdbc.with_gui.dao.dao;
 
-import training.design_pattern.dao.db.DBConnect;
-import training.design_pattern.dao.model.DesignPattern;
+import training.database.jdbc.with_gui.dao.model.DesignPattern;
+import training.database.jdbc.with_gui.dao.db.DBConnect;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -56,5 +56,4 @@ public class DesignPatternMySQLDAO implements DesignPatternDAO
         }
         return personList;
     }
-    
 }

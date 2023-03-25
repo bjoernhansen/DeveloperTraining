@@ -1,12 +1,12 @@
 package training.database.jdbc;
 
 import com.zaxxer.hikari.HikariDataSource;
-import training.database.jdbc.JdbcExample;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import static training.database.DatabaseAccessData.DEFAULT_DATABASE;
 import static training.database.DatabaseAccessData.PASSWORD;
 import static training.database.DatabaseAccessData.URL;
 import static training.database.DatabaseAccessData.USER;
@@ -33,7 +33,7 @@ public class UsageOfHikariCP
     private static DataSource createDataSource()
     {
         HikariDataSource dc = new HikariDataSource();
-        dc.setJdbcUrl(URL);
+        dc.setJdbcUrl(URL + DEFAULT_DATABASE);
         dc.setUsername(USER);
         dc.setPassword(PASSWORD);
         return dc;

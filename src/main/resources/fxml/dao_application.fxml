@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 
-<BorderPane prefHeight="348.0" prefWidth="673.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="training.design_pattern.dao.application.DesignPatternController">
+<BorderPane prefHeight="348.0" prefWidth="673.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="training.database.jdbc.with_gui.dao.application.DesignPatternController">
 	<center>
 		<TableView fx:id="designPatternTableView" editable="true" prefHeight="191.0" prefWidth="469.0" BorderPane.alignment="CENTER">
 			<columns>

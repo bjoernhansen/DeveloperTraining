@@ -1,6 +1,6 @@
-package training.design_pattern.dao.dao;
+package training.database.jdbc.with_gui.dao.dao;
 
-import training.design_pattern.dao.model.DesignPattern;
+import training.database.jdbc.with_gui.dao.model.DesignPattern;
 
 import java.util.ArrayList;
 import java.util.List;
