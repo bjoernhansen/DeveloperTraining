@@ -13,9 +13,10 @@ dependencies {
     implementation 'com.zaxxer:HikariCP:5.0.1'
     implementation 'org.hibernate:hibernate-core:6.2.0.CR3'
     implementation 'org.mybatis:mybatis:3.5.12'
-    implementation 'org.jooq:jooq:3.18.0'
-    implementation 'org.jooq:jooq-codegen:3.18.0'
-    implementation 'org.jooq:jooq-meta:3.18.0'
+    implementation 'org.jooq:jooq:3.16.8'
+    implementation 'org.jooq:jooq-codegen:3.16.8'
+    implementation 'org.jooq:jooq-meta:3.16.8'
+    implementation 'com.h2database:h2:2.1.214'
 
     // Apache
     implementation 'commons-io:commons-io:2.11.0'
@@ -35,6 +36,11 @@ dependencies {
     // XML
     implementation 'org.jdom:jdom2:2.0.6.1'
     // implementation 'com.sun.xml.bind:jaxb-impl:2.3.3' <-- schon über andere Dependencies enthalten
+
+    // Logging
+    // implementation 'org.slf4j:slf4j-api:2.0.7'
+    implementation 'org.slf4j:slf4j-reload4j:2.0.7'
+    // implementation 'org.slf4j:slf4j-log4j12:2.0.7'
 
     // Testing
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.0'
