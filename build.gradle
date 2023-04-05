@@ -8,6 +8,9 @@ repositories {
 }
 
 dependencies {
+    // implementation 'org.projectlombok:lombok:1.18.22'
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+
     // Database Access
     implementation 'mysql:mysql-connector-java:8.0.31'
     implementation 'com.zaxxer:HikariCP:5.0.1'
