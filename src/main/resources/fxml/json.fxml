@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.BorderPane?>
-<BorderPane prefHeight="336.0" prefWidth="526.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="training.utilities.gson.from_file.SampleController">
+<BorderPane prefHeight="336.0" prefWidth="526.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="training.utilities.json.gson.from_file.SampleController">
    <center>
       <TableView fx:id="tableView" prefHeight="200.0" prefWidth="344.0" BorderPane.alignment="CENTER">
         <columns>

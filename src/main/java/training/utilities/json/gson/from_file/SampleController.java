@@ -1,4 +1,4 @@
-package training.utilities.gson.from_file;
+package training.utilities.json.gson.from_file;
 
 import java.net.URL;
 import java.util.ResourceBundle;

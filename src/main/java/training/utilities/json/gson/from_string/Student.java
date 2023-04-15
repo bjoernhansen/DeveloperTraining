@@ -1,4 +1,4 @@
-package training.utilities.gson.from_string;
+package training.utilities.json.gson.from_string;
 
 class Student
 {

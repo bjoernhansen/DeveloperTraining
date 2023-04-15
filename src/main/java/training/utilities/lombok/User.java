@@ -1,29 +1,37 @@
 package training.utilities.lombok;
 
-import lombok.NoArgsConstructor;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.io.Serializable;
 
-// @NoArgsConstructor
+
+@Getter
+@Setter
+// @NoArgsConstructor <-- nicht möglich, wenn finale Felder deklariert
+@AllArgsConstructor
+@RequiredArgsConstructor // final oder @NonNUll-Annotiert wird berücksichtigt
+@ToString(onlyExplicitlyIncluded = true)
+@EqualsAndHashCode
 public class User implements Serializable
 {
+    @Setter(AccessLevel.PACKAGE)
     private Long id; // will be set when persisting
     
+    @ToString.Include
+    @NonNull
     private String firstName;
-    private String lastName;
+    
+    @ToString.Include
+    private final String lastName;
+    
+    
     private int age;
     
-    public User() {
-    }
-    
-    public User(String firstName, String lastName, int age) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-    }
-    
-    public Long getId()
-    {
-        return id;
-    }
 }
