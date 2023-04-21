@@ -10,9 +10,6 @@ import java.util.List;
 
 public class HibernateExample
 {
-    
-    
-    
     public static void main(String[] args)
     {
         // A SessionFactory is set up once for an application!
@@ -40,11 +37,9 @@ public class HibernateExample
             StandardServiceRegistryBuilder.destroy(registry);
         }
         
-        
         // Here we tell Hibernate that we annotated our User class
         /*MetadataSources sources = new MetadataSources(registry);
         sources.addAnnotatedClass(Customers.class);
         Metadata metadata = metadataSources.buildMetadata();*/
-        
     }
 }
