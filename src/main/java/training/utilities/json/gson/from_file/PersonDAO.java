@@ -14,11 +14,19 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.Collections;
 import java.util.List;
 
 public class PersonDAO
 {
-    public static final String JSON_FILE = "src/main/resources/json/personen.json"; // check format at https://jsonlint.com/
+    public static final String
+        JSON_FILE = "src/main/resources/json/personen.json"; // check format at https://jsonlint.com/
+    
+    
+    public List<Person> findAll()
+    {
+        return readJson();
+    }
     
     public void savePerson(Person person)
     {
@@ -27,9 +35,18 @@ public class PersonDAO
         writeJson(list);
     }
     
-    public List<Person> findAll()
+    private List<Person> readJson()
     {
-        return readJson();
+        try(Reader reader = new InputStreamReader(new FileInputStream(JSON_FILE), StandardCharsets.UTF_8))
+        {
+            Gson gson = new GsonBuilder().create();
+            return gson.fromJson(reader, getGenericizedType());
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+        }
+        return Collections.emptyList();
     }
     
     private void writeJson(Object obj)
@@ -38,37 +55,19 @@ public class PersonDAO
                                      .create();
         try
         {
-            Type type = new TypeToken<List<Person>>()
-            {
-            }.getType();
-            String json = gson.toJson(obj, type);
-            
+            String json = gson.toJson(obj, getGenericizedType());
             Files.write(Paths.get(JSON_FILE), json.getBytes(), StandardOpenOption.CREATE);
-            
-        } catch(JsonIOException | IOException e)
+        }
+        catch(JsonIOException | IOException e)
         {
             e.printStackTrace();
         }
-        
     }
     
-    private List<Person> readJson()
+    private static Type getGenericizedType()
     {
-        try(Reader reader = new InputStreamReader(new FileInputStream(JSON_FILE), StandardCharsets.UTF_8))
+        return new TypeToken<List<Person>>()
         {
-            Gson gson = new GsonBuilder().create();
-            
-            Type type = new TypeToken<List<Person>>()
-            {
-            }.getType();
-            
-            return gson.fromJson(reader, type); // List<Person>
-            
-            // return getTestPersonsList();
-        } catch(IOException e)
-        {
-            e.printStackTrace();
-        }
-        return null;
+        }.getType();
     }
 }
