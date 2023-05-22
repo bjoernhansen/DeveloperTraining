@@ -21,8 +21,8 @@ public class Data extends MyObservable
 			catch (InterruptedException e){e.printStackTrace();}
 			
 			System.out.println("Observable: " + this.count);
-			this.setChanged();		// Daten haben sich ge�ndert
-			this.notifyObservers(LocalDate.now());	// "sendet" Daten
+			setChanged();		// Daten haben sich ge�ndert
+			notifyObservers(LocalDate.now());	// "sendet" Daten
 		}
 	}
 }

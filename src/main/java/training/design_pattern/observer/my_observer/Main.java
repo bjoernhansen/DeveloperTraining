@@ -1,4 +1,4 @@
-package training.design_pattern.observer.observer_observable;
+package training.design_pattern.observer.my_observer;
 
 public class Main
 {

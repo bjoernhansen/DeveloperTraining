@@ -6,7 +6,7 @@ import java.util.List;
 
 public class MyObservable 
 {
-	boolean stateChanged = false;
+	private boolean stateChanged = false;
 	
 	private final List<MyObserver> myObserverList = new ArrayList<>();
 	
@@ -22,19 +22,14 @@ public class MyObservable
 	{
 		this.stateChanged = true;
 	}
-		
-	public void notifyObservers()
-	{
-		notifyObservers(null);
-	}
-		
-	public void notifyObservers(LocalDate now)
+	
+	public void notifyObservers(Object obj)
 	{
 		if(this.stateChanged)
 		{
 			for( MyObserver observer : this.myObserverList)
 			{
-				observer.update(this, now);
+				observer.update(this, obj);
 			}			
 			this.stateChanged = false;			
 		}

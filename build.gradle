@@ -57,6 +57,14 @@ dependencies {
     testImplementation 'org.assertj:assertj-core:3.23.1'
 }
 
+gradle.projectsEvaluated {
+    tasks.withType(JavaCompile).tap {
+        configureEach {
+            options.compilerArgs << "-Xlint:deprecation"   // "-Xlint:deprecation" "-Xlint:unchecked"
+        }
+    }
+}
+
 javafx {
     version = "16"
     modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.media', 'javafx.graphics', 'javafx.web', 'javafx.swing' ]

@@ -1,6 +1,7 @@
 package training.basics.reflection;
 
 import java.awt.Rectangle;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 
@@ -120,9 +121,10 @@ class ReflectionTest
         try
         {
             Class<?> c = Class.forName(className);  // Class Loader
-            obj = c.newInstance();                  
+            obj = c.getDeclaredConstructor().newInstance();
         }
-        catch(ClassNotFoundException | InstantiationException | IllegalAccessException e)
+        catch(ClassNotFoundException | InstantiationException | IllegalAccessException | NoSuchMethodException |
+              InvocationTargetException e)
         {
             e.printStackTrace();
         }
