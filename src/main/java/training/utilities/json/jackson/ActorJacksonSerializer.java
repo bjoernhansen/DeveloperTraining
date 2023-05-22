@@ -14,7 +14,7 @@ public class ActorJacksonSerializer extends StdSerializer<ActorJackson>
         dateFormat = new SimpleDateFormat("dd-MM-yyyy");
     
     
-    public ActorJacksonSerializer(Class t)
+    public ActorJacksonSerializer(Class<ActorJackson> t)
     {
         super(t);
     }

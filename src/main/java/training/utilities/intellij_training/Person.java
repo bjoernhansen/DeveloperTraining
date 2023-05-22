@@ -16,6 +16,11 @@ public class Person implements Walkable
         this.lastName = "Peter";
     }
     
+    public String getFullName()
+    {
+        return firstName + " " + lastName;
+    }
+    
     public void setFirstName(String firstName)
     {
         this.firstName = firstName;
