@@ -1,19 +1,24 @@
-package training.design_pattern.observer.my_observer;
+package training.design_pattern.observer.my_observer.example_2;
+
+import training.design_pattern.observer.my_observer.Observer;
 
 
-public class GlumPrinter implements MyObserver
+class GlumpPrinter implements Observer<Glump>
 {
     private final String name;
+    
     private int age;
+    
     private String lastBirthdayPresent;
-
-
-    GlumPrinter(Glump glump)
+    
+    
+    GlumpPrinter(Glump glump)
     {
         this.name = glump.getName();
         this.age = glump.getAge();
+        this.lastBirthdayPresent = glump.getCurrentPresent();
     }
-
+    
     @Override
     public String toString()
     {
@@ -21,10 +26,9 @@ public class GlumPrinter implements MyObserver
     }
     
     @Override
-    public void update(MyObservable o, Object obj)
+    public void update(Glump glump)
     {
-        Glump glump = ((Glump)o);
         this.age = glump.getAge();
-        this.lastBirthdayPresent = (String)obj;
+        this.lastBirthdayPresent = glump.getCurrentPresent();
     }
 }
