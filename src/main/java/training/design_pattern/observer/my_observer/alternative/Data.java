@@ -35,7 +35,8 @@ class Data extends Observable
     @Override
     public <T extends Observable> T getIdentity()
     {
-        //noinspection unchecked
-        return (T) this;
+        // TODO get rid of unchecked warning
+        return null;
+        // return (T) this;
     }
 }
