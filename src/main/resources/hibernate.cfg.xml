@@ -14,7 +14,7 @@
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 
         <!-- JDBC connection pool (use the built-in) -->
-        <property name="hibernate.connection.pool_size">1</property>
+        <property name="hibernate.connection.pool_size">100</property>
 
         <!-- Disable the second-level cache  -->
         <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
@@ -26,7 +26,8 @@
         <!-- Mapping files -->
         <!-- Add your entity classes and mapping files here -->
 
-        <mapping class="training.database.hibernate.Customer"/>
+        <mapping class="training.database.hibernate.example_1.Customer"/>
+        <mapping class="training.database.hibernate.example_1.Order"/>
 
     </session-factory>
 </hibernate-configuration>

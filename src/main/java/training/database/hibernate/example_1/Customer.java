@@ -1,27 +1,30 @@
-package training.database.hibernate;
-
-import jakarta.persistence.GenerationType;
+package training.database.hibernate.example_1;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+
+import java.util.Set;
+import java.util.stream.Collectors;
 
 
 @Entity
-@Table(name="customers")
+@Table(name = "customers")
 public class Customer
 {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="customer_id")
+    @Column(name = "customer_id")
     private Integer customerId;
     
-    @Column(name="first_name")
+    @Column(name = "first_name")
     private String firstName;
     
-    @Column(name="last_name")
+    @Column(name = "last_name")
     private String lastName;
     
     private String address;
@@ -32,7 +35,22 @@ public class Customer
     
     private int points;
     
+    @OneToMany(mappedBy = "customer")
+    Set<Order> orders;
     
+    /*
+    
+    Example for ManyToMany:
+    
+    @ManyToMany(fetch=FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinTable(	name="student_kurs",
+				joinColumns={@JoinColumn(name="id_student")},
+				inverseJoinColumns={@JoinColumn(name="id_kurs")}
+	)
+	private Set<Kurs> kurse = new HashSet(0);
+  
+     */
+     
     public Customer()
     {
     }
@@ -120,6 +138,14 @@ public class Customer
     @Override
     public String toString()
     {
-        return firstName + " " + lastName + " (ID: " + customerId + ")";
+        return firstName + " " + lastName + " (ID: " + customerId + ", Orders: " + getOrdersAsText() + ")";
+    }
+    
+    private String getOrdersAsText()
+    {
+        return orders.stream()
+                     .map(Order::getOrderId)
+                     .map(id -> Integer.toString(id))
+                     .collect(Collectors.joining(", "));
     }
 }
