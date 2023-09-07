@@ -1,5 +1,6 @@
 package training.design_pattern.state;
 
+
 public class PaintWindow implements Tool{
 
     private Tool tool;

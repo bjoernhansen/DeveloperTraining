@@ -2,16 +2,20 @@ package training.design_pattern.state;
 
 import java.util.function.Supplier;
 
+
 public enum ToolType implements Tool
 {
     SELECTOR(()->"Release Selector", ()->"Activate Selector"),
     BRUSH(()->"Release Brush", ()->"Activate Brush"),
-    ERSASER(()->"Release Eraser", ()->"Activate Eraser");
+    ERASER(()->"Release Eraser", ()->"Activate Eraser");
+
 
     private final Supplier<String>
         mouseUpAction;
-    
-    private final Supplier<String> mouseDownAction;
+
+    private final Supplier<String>
+        mouseDownAction;
+
 
     ToolType(Supplier<String> mouseUpAction, Supplier<String> mouseDownAction)
     {

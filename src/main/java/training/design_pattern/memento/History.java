@@ -1,20 +1,26 @@
 package training.design_pattern.memento;
 
+import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.LinkedList;
-import java.util.Optional;
 
 public class History
 {
-    private final Deque<Memento> mementos = new LinkedList<>();
+    private final Deque<Memento>
+        mementos = new ArrayDeque<>();
+    
     
     public void push(Memento memento)
     {
         mementos.addFirst(memento);
     }
     
-    public Optional<Memento> pop()
+    public Memento pop()
     {
-        return Optional.ofNullable(mementos.removeFirst());
+        return mementos.pollFirst();
+    }
+    
+    boolean isEmpty()
+    {
+        return mementos.isEmpty();
     }
 }

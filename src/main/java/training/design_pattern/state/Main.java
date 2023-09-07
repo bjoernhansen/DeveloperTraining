@@ -8,7 +8,7 @@ public class Main {
 
         paintWindow.mouseDownAction();
 
-        paintWindow.setTool(ToolType.ERSASER);
+        paintWindow.setTool(ToolType.ERASER);
 
         paintWindow.mouseDownAction();
         paintWindow.mouseUpAction();
