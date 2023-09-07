@@ -10,8 +10,12 @@ public class Main {
         SqrType sqrType = IS_SQR ? SqrType.SQR : SqrType.NO_SQR;
 
         // example for data retrieval
-        int linkDateOffset = sqrType.getOffset(PackagingBriefingDateOffsetType.LINKDATE);
-        String linkDateFeatureKey = PackagingBriefingDateOffsetType.LINKDATE.getFeatureKey();
+
+        DateType dateType = DateType.getDateType("key:linkdate");
+        System.out.println(dateType);
+
+        int linkDateOffset = sqrType.getOffset(DateType.LINK_DATE);
+        String linkDateFeatureKey = DateType.LINK_DATE.getFeatureKey();
 
         System.out.printf("linkDateOffset: %d; linkDateFeatureKey: %s%n", linkDateOffset, linkDateFeatureKey);
     }
