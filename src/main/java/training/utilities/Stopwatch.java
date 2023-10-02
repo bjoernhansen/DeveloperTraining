@@ -3,18 +3,33 @@ package training.utilities;
 public class Stopwatch
 {
     private final boolean
-            useNanoTime = false;
+        useNanoTime;
 
     private long
-            startTime = 0;
+        startTime = 0;
 
-    boolean
-            started = false;
-    
+    private boolean
+        started = false;
+
+
+    public static Stopwatch withMillisecondPrecision()
+    {
+        return new Stopwatch(false);
+    }
+
+    public static Stopwatch withNanosecondPrecision()
+    {
+        return new Stopwatch(true);
+    }
+
+    private Stopwatch(boolean useNanoTime)
+    {
+        this.useNanoTime = useNanoTime;
+    }
 
     public void startClock()
     {
-        startTime = useNanoTime ? System.nanoTime() : System.currentTimeMillis();
+        startTime = getCurrentTime();
         started = true;
     }
 
@@ -22,14 +37,18 @@ public class Stopwatch
     {
         if(started)
         {
-            long stopTime = useNanoTime ? System.nanoTime() : System.currentTimeMillis();
-            System.out.println("Zeit: " + (stopTime - startTime));
+            System.out.println("elapsed time: " + getElapsedTimeUntilNow());
             started = false;
         }
     }
 
-    public static Stopwatch make()
+    private long getElapsedTimeUntilNow()
     {
-        return new Stopwatch();
+        return getCurrentTime() - startTime;
+    }
+
+    private long getCurrentTime()
+    {
+        return useNanoTime ? System.nanoTime() : System.currentTimeMillis();
     }
 }

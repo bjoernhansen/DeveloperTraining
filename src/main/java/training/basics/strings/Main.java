@@ -11,7 +11,7 @@ public class Main {
         String fileName = "16_oder_Gel_baec5ca1d0bb4ca1ca69c7499eae8f43_old_1084691.pdf";
 
 
-        Stopwatch stopwatch = Stopwatch.make();
+        Stopwatch stopwatch = Stopwatch.withMillisecondPrecision();
 
         System.out.println("Vortest");
         stopwatch.startClock();
