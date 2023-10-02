@@ -10,7 +10,7 @@ public abstract class FileReader
         wasFileRead = false;
 
 
-    public FileReader(FileReader next)
+    protected FileReader(FileReader next)
     {
         this.next = next;
     }
