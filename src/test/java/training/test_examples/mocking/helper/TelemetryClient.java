@@ -23,7 +23,6 @@ public class TelemetryClient
     
     public void configure(String configureKey)
     {
-        // do something
     }
     
     public double receive()

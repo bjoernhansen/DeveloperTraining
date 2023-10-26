@@ -10,6 +10,7 @@ public class AssumptionTest
 {
     @Test
     void exitIfFalseIsTrue() {
+        // Test wird abgebrochen, wenn die Bedingung nicht erfüllt wird, aber kein automatischer Test-Failure
         assumeTrue(false);
         System.exit(1);
     }

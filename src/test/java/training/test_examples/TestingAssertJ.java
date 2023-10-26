@@ -8,10 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.assertj.core.api.Assertions.withPrecision;
+import static org.assertj.core.api.Assertions.*;
 
 
 public class TestingAssertJ
@@ -27,7 +24,6 @@ public class TestingAssertJ
                            .startsWith("Fro")
                            .endsWith("do")
                            .isEqualToIgnoringCase("frodo");
-        
     }
     
     @Test
@@ -51,7 +47,7 @@ public class TestingAssertJ
     {
         SomeExampleClass someExampleClass1 = new SomeExampleClass(12, "Primzahl", false);
         SomeExampleClass someExampleClass2 = new SomeExampleClass(6, "Beine von Insekten", true);
-    
+        
         assertThat(someExampleClass1).usingRecursiveComparison().isNotEqualTo(someExampleClass2);
     }
     
@@ -70,7 +66,7 @@ public class TestingAssertJ
     void classTest()
     {
         assertThat(Runnable.class).isInterface();
-    
+        
         // or if you want to check if one class is assignable from the other:
         assertThat(Exception.class).isAssignableFrom(NoSuchElementException.class);
     }

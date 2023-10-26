@@ -14,7 +14,7 @@ public class StuffedAnimalAssert extends AbstractAssert<StuffedAnimalAssert, Stu
     
     public StuffedAnimalAssert isTeddy()
     {
-        Assertions.assertThat(actual.getAnimalType()).isEqualTo(AnimalType.BEAR);
+        Assertions.assertThat(actual.animalType()).isEqualTo(AnimalType.BEAR);
         return this;
     }
     

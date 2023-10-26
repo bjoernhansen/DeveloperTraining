@@ -29,7 +29,7 @@ public class MatchingTrainer
     private static void practicalExamples()
     {
         String regex = "\\$\\((.*?)\\)";
-        String input = "Der $(graue Esel) liegt unter der $(grünen Wiese) und genießt die $(gelbe Sonne).";
+        String input = "Der $(graue Esel) liegt auf der $(grünen Wiese) und genießt die $(gelbe Sonne).";
 
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(input);

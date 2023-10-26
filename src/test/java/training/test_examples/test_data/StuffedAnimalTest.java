@@ -22,8 +22,8 @@ public class StuffedAnimalTest
     
         StuffedAnimal teddy = StuffedAnimalBuilder.makeDefaultTeddy();
         
-        assertThat(teddy.getColor()).isEqualTo(Color.BROWN);
-        assertThat(hugeLion.getName()).isEqualTo(blackLion.getName());
+        assertThat(teddy.color()).isEqualTo(Color.BROWN);
+        assertThat(hugeLion.name()).isEqualTo(blackLion.name());
         
         StuffedAnimalAssert.assertThat(teddy).isTeddy();
     }

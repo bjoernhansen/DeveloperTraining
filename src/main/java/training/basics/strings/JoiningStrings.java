@@ -11,8 +11,7 @@ public class JoiningStrings {
               .add("03");
         String joinedString = joiner.toString(); // "01,02,03"
         String joinedString2 = String.join(" - ", "04", "05", "06"); // "04 - 05 - 06"
-
-
+        
         StringBuilder s;
     }
 }

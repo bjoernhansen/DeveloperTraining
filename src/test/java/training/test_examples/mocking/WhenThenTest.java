@@ -35,7 +35,7 @@ public class WhenThenTest
     }
     
     @Test
-    public void consecutiveReturnValuesTest()
+    void consecutiveReturnValuesTest()
     {
         when(client.isOnline()).thenReturn(true, false); // hier überschreiben wir den Default
         controls.checkTransmission();
@@ -43,7 +43,7 @@ public class WhenThenTest
     }
     
     @Test
-    public void checkMockReset()
+    void checkMockReset()
     {
         when(client.isOnline()).thenReturn(true); // hier überschreiben wir den Default
         reset(client); // <-- Mock wird vollständig resettet

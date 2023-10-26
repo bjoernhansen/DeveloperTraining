@@ -2,7 +2,9 @@ package training.test_examples.mocking.helper;
 
 public class TelemetryDiagnosticControls
 {
-    public static final String SOME_MESSAGE = "some message";
+    public static final String
+            SOME_MESSAGE = "some message";
+
     private final TelemetryClient
         telemetryClient;
     
