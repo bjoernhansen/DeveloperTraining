@@ -1,4 +1,4 @@
-package training.basics.logging.new_example;
+package training.basics.logging.example_2;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -13,7 +13,7 @@ public class Main
     public static void main(String[] args)
     {
         /** Important note: To make it work, rename log4j2.properties from the other example (or it would be preferably used)
-         * and then rename log4j2.xml_invisible to log4j2.xml
+         * and then rename log4j2_invisible.xml to log4j2.xml
          * Both files are located in the source root*/
         
         log.info("start");

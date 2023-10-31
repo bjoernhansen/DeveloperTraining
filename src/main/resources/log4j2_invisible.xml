@@ -22,10 +22,10 @@
 		<Root level="debug"><!-- Klasse A erbt Level von Root (Main) -->
 			<AppenderRef ref="console" />
 		</Root>
-		<Logger name="training.basics.logging.new_example.A" level="info"><!-- Klasse B kein dbug, alles ab Info -->
+		<Logger name="training.basics.logging.example_2.A" level="info"><!-- Klasse B kein dbug, alles ab Info -->
 			<AppenderRef ref="file" /> <!-- file and console --> 
 		</Logger>
-		<Logger name="training.basics.logging.new_example.C" level="off">
+		<Logger name="training.basics.logging.example_2.C" level="off">
 			<AppenderRef ref="console" /> <!-- only console -->
 		</Logger>
 	</Loggers>

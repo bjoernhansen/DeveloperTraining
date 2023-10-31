@@ -1,4 +1,4 @@
-package training.basics.logging.new_example;
+package training.basics.logging.example_2;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

@@ -1,4 +1,4 @@
-package training.basics.logging;
+package training.basics.logging.example_1;
 
 
 import org.apache.logging.log4j.Level;
@@ -17,7 +17,6 @@ public class LoggingExample{
     
     /* Get the class name to be printed on */
     static Logger log = LogManager.getLogger(LoggingExample.class.getName());
-    
     
     
     public static void main(String[] args)throws IOException,SQLException{

@@ -1,14 +1,14 @@
-package training.basics.logging.new_example;
+package training.basics.logging.example_2;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
-public class C
+public class A
 {
     static Logger log = LogManager.getLogger();
     
-    public void cM1()
+    public void aM1()
     {
         log.info("start");
         log.debug("debug...");
