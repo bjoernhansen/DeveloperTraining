@@ -1,6 +1,6 @@
 package training.concurrency;
 
-import static training.concurrency.Main.DISTANCE;
+import static training.concurrency.WorkingWithThreads.DISTANCE;
 
 public class CustomThread extends Thread {
     private final int threadNumber;

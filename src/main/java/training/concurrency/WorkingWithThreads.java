@@ -2,8 +2,8 @@ package training.concurrency;
 
 import java.util.*;
 
-public class Main {
-
+public class WorkingWithThreads
+{
     private static final int MAX_NUMBER_OF_THREADS = 5;
     static final int DISTANCE = 3;
 
