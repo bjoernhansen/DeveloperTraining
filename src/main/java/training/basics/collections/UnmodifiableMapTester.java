@@ -1,21 +1,38 @@
 package training.basics.collections;
 
-import java.util.Collections;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class UnmodifiableMapTester
 {
+
+    public static final String HELLO = "Hello";
+    public static final String JOHN = "John";
+
     public static void main(String[] args)
     {
-        Map <String, Integer> map2 = Map.of("Hello", 1, "John", 2);
-
-        Map<String, Integer> map = Collections.unmodifiableMap(Stream.of(new Object[][]{
-                { "Hello", 1 },
-                { "John", 2 },
+        Map<String, Integer> map1 = Collections.unmodifiableMap(Stream.of(new Object[][]{
+                {HELLO, 1 },
+                {JOHN, 2 },
         }).collect(Collectors.toMap(data -> (String)data[0], data -> (Integer)data[1])));
 
+        Map <String, Integer> map2 = Map.of(HELLO, 1, JOHN, 2);
+
+        Map<String, Integer> map3 = Map.ofEntries(
+                Map.entry(HELLO, 1),
+                Map.entry(JOHN, 2)
+        );
+
+        Map<String, Integer> map4 = Collections.unmodifiableMap(Stream.of(
+                new AbstractMap.SimpleEntry<>("HELLO", 1),
+                new AbstractMap.SimpleEntry<>("JOHN", 2)
+        ).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue)));
+
+        List.of(map1, map2, map3, map4).forEach(UnmodifiableMapTester::printMapElements);
+    }
+
+    private static void printMapElements(Map<String, Integer> map) {
         map.forEach((key, value) -> System.out.printf("key: %s; value: %s%n", key, value));
     }
 }
