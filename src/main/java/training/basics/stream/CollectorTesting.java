@@ -17,7 +17,6 @@ import java.util.stream.IntStream;
 
 public class CollectorTesting
 {
-    
     public static void main(String[] args)
     {
         List<Integer> intValues = IntStream.range(0, 50)

@@ -1,52 +1,56 @@
 package training.basics.stream;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
+import static java.util.Collections.reverseOrder;
+import static java.util.stream.Collectors.joining;
 
-public class IntStreamTesting
+
+public class IntStreamExample
 {
     public static void main(String[] args)
     {
         // Maximum ausgeben
-        System.out.println(IntStream.range(-12, 24)
-                                    .map(x -> -x * x + 2)
-                                    .max()
-                                    .getAsInt());
+        int max = IntStream.range(-12, 24)
+                           .map(x -> -x * x + 2)
+                           .max()
+                           .orElse(Integer.MIN_VALUE);
+        System.out.println(max);
         
         // Mapping mit eigener Funktion
         IntStream.range(32, 100)
-                 .map(IntStreamTesting::square)
+                 .map(IntStreamExample::square)
                  .forEach(System.out::println);
-    
-        // Zahlen aufsummieren
+        
+        // Summen mit Stream bilden
         // https://www.baeldung.com/java-stream-sum
         List<Integer> intList = Arrays.asList(1, 2, 3, 4, 5, 6);
-    
-        // IntStream.sum() verwenden
+        
         int sum1 = intList.stream()
                           .mapToInt(Integer::intValue)
                           .sum();
-    
+        
         // reduce und Lambda-Ausdruck verwenden
         int sum2 = intList.stream()
                           .reduce(0, (a, b) -> a + b + 1);
-    
+        
         // reduce und Methoden-Referenz verwenden
         int sum3 = intList.stream()
                           .reduce(0, Integer::sum); // oder eigene Methode als Referenz übergeben
         
-        
         // Direkt einen IntStream aus Zahlen erzeugen
-        Stream.of(1, 2, 3, 4, 5, 6)
-              .mapToInt(Integer::intValue)
-              .sum();
-    
+        int sum4 = Stream.of(1, 2, 3, 4, 5, 6)
+                         .mapToInt(Integer::intValue)
+                         .sum();
+        
+        String sums = Stream.of(sum1, sum2, sum3, sum4)
+                            .map(String::valueOf)
+                            .collect(joining(", "));
+        System.out.println("Summen: " + sums);
+        
         IntStream.range(1, 200)
                  .map(i -> i * i)
                  .filter(i -> i % 35 == 0)
@@ -56,28 +60,16 @@ public class IntStreamTesting
         
         IntStream.range(0, 50)
                  .boxed()
-                 .collect(Collectors.toList())
+                 .toList()
                  .forEach(System.out::println);
-    
-        // Sortieren in umgekehrter Reihenfolge
-        List<Integer> intList2 = List.of(2, 4, 7, 10, 1);
-        System.out.println(intList.stream()
-                                  .sorted(Collections.reverseOrder())
-                                  .map(IntStreamTesting::square)
-                                  .findFirst()
-                                  .orElse(0));
-    
-        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
-    
-        List<Integer> result = new ArrayList<>();
         
-        for (Integer integer : list)
-        {
-            if (integer%2==1)
-            {
-                result.add(integer);
-            }
-        }
+        // Sortieren in umgekehrter Reihenfolge
+        List<Integer> intListUnordered = List.of(2, 4, 7, 10, 1);
+        System.out.println(intListUnordered.stream()
+                                           .sorted(reverseOrder())
+                                           .map(IntStreamExample::square)
+                                           .findFirst()
+                                           .orElse(0));
     }
     
     private static int square(int number)
