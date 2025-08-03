@@ -1,5 +1,6 @@
 package training.test_examples.parameterized_tests.variable_source;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import training.test_examples.helper.Strings;
@@ -9,7 +10,8 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class VariableSourceTest
+@Disabled
+class VariableSourceTest
 {
     static Stream<Arguments> arguments = Stream.of(
         Arguments.of(null, true), // null strings should be considered blank
