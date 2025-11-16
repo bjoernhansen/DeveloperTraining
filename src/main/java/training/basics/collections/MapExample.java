@@ -6,7 +6,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 
-public class MapTesting {
+public class MapExample
+{
 
     public static void main(String[] args) {
 

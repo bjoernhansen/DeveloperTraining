@@ -3,7 +3,8 @@ package training.basics.collections;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RemoveIfTester {
+public class RemoveFromMapExample
+{
 
     public static void main(String[] args) {
         Map<String, Long> myLongs = new HashMap<>();

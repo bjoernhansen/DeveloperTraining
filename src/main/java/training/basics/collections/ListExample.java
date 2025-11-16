@@ -8,7 +8,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 
-public class ListTester {
+public class ListExample
+{
 
 
     public static void main(String[] args) {

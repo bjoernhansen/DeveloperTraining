@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class UnmodifiableMapTester
+public class UnmodifiableMapExample
 {
 
     public static final String HELLO = "Hello";
@@ -29,7 +29,7 @@ public class UnmodifiableMapTester
                 new AbstractMap.SimpleEntry<>("JOHN", 2)
         ).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue)));
 
-        List.of(map1, map2, map3, map4).forEach(UnmodifiableMapTester::printMapElements);
+        List.of(map1, map2, map3, map4).forEach(UnmodifiableMapExample::printMapElements);
     }
 
     private static void printMapElements(Map<String, Integer> map) {

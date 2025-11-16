@@ -4,7 +4,7 @@ import training.basics.hero.RandomNameCreator;
 
 import java.util.*;
 
-class CollectionTest
+class CollectionExample
 {
     private static final int NUMBER_OF_ELEMENTS = 25;
 
