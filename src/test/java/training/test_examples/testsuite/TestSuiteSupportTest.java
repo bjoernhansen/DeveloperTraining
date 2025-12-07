@@ -1,4 +1,4 @@
-package training.test_examples;
+package training.test_examples.testsuite;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;

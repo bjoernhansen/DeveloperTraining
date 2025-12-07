@@ -1,6 +1,5 @@
 package training.basics.collections;
 
-import java.sql.SQLOutput;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
@@ -13,11 +12,9 @@ public class RandomSelectionFromMap
 {
     Random random = new Random();
     
-    
-    
-    
-    <K, V> K randomKeyUsingStream(Map<K, V> map) {
-  
+    <K, V> K randomKeyUsingStream(Map<K, V> map)
+    {
+        
         return map.keySet()
                   .stream()
                   .skip(random.nextInt(map.size()))
@@ -25,7 +22,8 @@ public class RandomSelectionFromMap
                   .orElseThrow();
     }
     
-    <K, V> V randomValueUsingStream(Map<K, V> map) {
+    <K, V> V randomValueUsingStream(Map<K, V> map)
+    {
         return map.values()
                   .stream()
                   .skip(random.nextInt(map.size()))
@@ -33,7 +31,8 @@ public class RandomSelectionFromMap
                   .orElseThrow();
     }
     
-    <K, V> Map.Entry<K, V> randomEntryUsingStream(Map<K, V> map) {
+    <K, V> Map.Entry<K, V> randomEntryUsingStream(Map<K, V> map)
+    {
         return map.entrySet()
                   .stream()
                   .skip(random.nextInt(map.size()))
@@ -41,7 +40,8 @@ public class RandomSelectionFromMap
                   .orElseThrow();
     }
     
-    public static Map<String, String> createFruitMap() {
+    public static Map<String, String> createFruitMap()
+    {
         Map<String, String> dataMap = new HashMap<>();
         dataMap.put("Key-A", "Apfel");
         dataMap.put("Key-B", "Birne");

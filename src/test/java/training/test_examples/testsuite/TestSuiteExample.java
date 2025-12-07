@@ -1,6 +1,8 @@
-package training.test_examples;
+package training.test_examples.testsuite;
 
 import org.junit.platform.suite.api.*;
+import training.test_examples.AssumptionTest;
+import training.test_examples.IgnoredTestsTest;
 import training.test_examples.test_data.StuffedAnimalTest;
 
 @Suite
