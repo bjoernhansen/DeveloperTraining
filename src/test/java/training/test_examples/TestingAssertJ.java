@@ -1,6 +1,11 @@
 package training.test_examples;
 
+import org.assertj.core.api.Condition;
+import org.assertj.core.api.ThrowableAssert;
+import org.junit.jupiter.api.DisplayNameGeneration;
+import org.junit.jupiter.api.DisplayNameGenerator;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.function.Executable;
 import training.test_examples.helper.SomeExampleClass;
 
 import java.io.File;
@@ -9,8 +14,11 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 import static org.assertj.core.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
+@DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
 public class TestingAssertJ
 {
     private List<String>
@@ -104,5 +112,40 @@ public class TestingAssertJ
                 List<String> list = Arrays.asList("String one", "String two");
                 list.get(2);
             }).withMessageMatching("Index \\d+ out of bounds for length \\d+");
+        
+        Executable act = () -> {
+            List<String> list = Arrays.asList("String one", "String two");
+            list.get(2);
+        };
+        
+        assertThatCode(() -> {
+            List<String> list = Arrays.asList("String one", "String two");
+            list.get(1);
+        }).doesNotThrowAnyException();
+    }
+    
+    @Test
+    void teste_die_automatische_Generierung_der_dargestellten_Namen()
+    {
+        assertThat(true).isTrue();
+    }
+    
+    private record Member(int age, String name){}
+    
+    @Test
+    void conditionTest()
+    {
+        Condition<Member> senior = new Condition<>(m -> m.age() >= 60, "senior");
+        
+        Condition<Member> nameJohn = new Condition<>( m -> 	m.name().equalsIgnoreCase("John"), "name John" );
+        
+        Member john = new Member(65, "John");
+        
+        assertThat(john).is(senior);
+        assertThat(john).has(nameJohn);
+        
+        Member jane = new Member(60, "Jane");
+        
+        assertThat(jane).doesNotHave(nameJohn);
     }
 }
